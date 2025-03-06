@@ -78,28 +78,28 @@
 - [Cheerio](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/cheerio.mdc) - Fast, flexible implementation of jQuery for server-side use.
 - [CodeMirror](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/codemirror.mdc) - Code editor component for the web.
 - [D3.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/d3.mdc) - JavaScript library for data visualization.
-- [Django](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/django.mdc) - High-level Python web framework.
+- [Django](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/django.mdc) - Comprehensive guide to Django best practices covering code organization, performance optimization, security measures, testing strategies, and community standards for maintainable applications.
 - [Django ORM](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/django-orm.mdc) - Object-relational mapper for Django.
 - [Django REST Framework](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/django-rest-framework.mdc) - Toolkit for building Web APIs with Django.
-- [Express](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/express.mdc) - Web application framework for Node.js.
+- [Express](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/express.mdc) - Comprehensive guidance for developing robust Express.js applications covering middleware implementation, routing, error handling, and security practices for Node.js web servers.
 - [Fabric.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/fabric-js.mdc) - JavaScript canvas library.
-- [FastAPI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/fastapi.mdc) - Modern, fast web framework for building APIs with Python.
+- [FastAPI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/fastapi.mdc) - Comprehensive guidelines for developing robust FastAPI applications covering code structure, dependency injection, asynchronous patterns, and performance optimization for Python-based APIs.
 - [Fiber](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/fiber.mdc) - Express-inspired web framework for Go.
-- [Flask](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/flask.mdc) - Lightweight WSGI web application framework for Python.
+- [Flask](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/flask.mdc) - Comprehensive best practices for Flask applications covering code structure, security implementation, performance optimization, and testing methodologies.
 - [Flask RESTful](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/flask-restful.mdc) - Extension for Flask that adds support for REST APIs.
 - [HTMX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/htmx.mdc) - HTML-based AJAX and interactivity tool.
 - [jQuery](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/jquery.mdc) - JavaScript library for DOM manipulation.
 - [Laravel](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/laravel.mdc) - PHP web application framework.
 - [Material UI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/material-ui.mdc) - React UI framework.
-- [Next.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/next-js.mdc) - React framework for production.
+- [Next.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/next-js.mdc) - Comprehensive guidance for Next.js development covering application architecture, rendering strategies, performance optimization, and best practices for building robust, scalable React applications.
 - [NestJS](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nestjs.mdc) - Progressive Node.js framework.
 - [Nuxt](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nuxt.mdc) - Vue framework for building web applications.
 - [Phoenix](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/phoenix.mdc) - Web framework for Elixir.
 - [Pyramid](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pyramid.mdc) - Web framework for Python.
 - [Qwik](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/qwik.mdc) - New kind of web framework.
-- [React](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react.mdc) - JavaScript library for building user interfaces.
+- [React](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react.mdc) - Comprehensive guide to React best practices covering code organization, performance optimization, security considerations, testing strategies, and component patterns for building maintainable, scalable applications.
 - [React MobX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-mobx.mdc) - State management for React.
-- [React Native](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-native.mdc) - Framework for building native applications using React.
+- [React Native](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-native.mdc) - Comprehensive best practices for React Native development covering TypeScript integration, performance optimization, component architecture, and cross-platform considerations.
 - [React Query](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-query.mdc) - Data fetching library for React.
 - [React Redux](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-redux.mdc) - Official Redux bindings for React.
 - [Redux](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/redux.mdc) - State container for JavaScript apps.
@@ -110,6 +110,8 @@
 - [Shadcn](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/shadcn.mdc) - UI component library.
 - [Socket.IO](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/socket-io.mdc) - Real-time event-based communication.
 - [SolidJS](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/solidjs.mdc) - Declarative JavaScript library for building user interfaces.
+- [Spring](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/spring.mdc) - Comprehensive best practices for Java backend applications using Spring framework covering layered architecture, dependency injection, and security implementation.
+- [Spring Boot](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/springboot.mdc) - Best practices for developing robust Spring Boot applications covering application structure, configuration management, and production deployment strategies.
 - [Svelte](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/svelte.mdc) - Component framework that compiles to vanilla JavaScript.
 - [SvelteKit](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sveltekit.mdc) - Framework for building web applications with Svelte.
 - [Three.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/three-js.mdc) - JavaScript 3D library.
@@ -161,28 +163,28 @@
 
 - [Bash](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bash.mdc) - Unix shell and command language.
 - [C#](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/c-sharp.mdc) - General-purpose programming language.
-- [Go](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/go.mdc) - Programming language designed at Google.
-- [Java](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/java.mdc) - General-purpose programming language.
+- [Go](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/go.mdc) - Comprehensive guide to Go development covering idiomatic code patterns, performance optimization, error handling strategies, and concurrency best practices.
+- [Java](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/java.mdc) - Best practices for Java development covering code style, object-oriented design patterns, performance optimization, and guidelines for writing clean, maintainable code.
 - [PHP](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/php.mdc) - Server-side scripting language.
-- [Python](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/python.mdc) - High-level programming language.
+- [Python](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/python.mdc) - Comprehensive guidelines for Python development covering code organization, performance, security, testing, and best practices for maintaining clean, efficient codebases.
 - [Ruby](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ruby.mdc) - Dynamic, object-oriented programming language.
-- [Rust](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/rust.mdc) - Systems programming language.
+- [Rust](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/rust.mdc) - Comprehensive guide to Rust development covering ownership model, concurrency patterns, memory safety, and idioms for writing efficient, secure systems code.
 - [Solidity](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/solidity.mdc) - Object-oriented programming language for Ethereum.
-- [TypeScript](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/typescript.mdc) - JavaScript with syntax for types.
+- [TypeScript](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/typescript.mdc) - Best practices and coding standards for TypeScript development, including guidelines on type safety, performance optimization, and patterns for writing clean, maintainable code.
 - [Zsh](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/zsh.mdc) - Extended Bourne shell.
 
 ## Data Storage & Databases
 
 - [DuckDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/duckdb.mdc) - In-process SQL OLAP database management system.
 - [Elasticsearch](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/elasticsearch.mdc) - Distributed, RESTful search and analytics engine.
-- [MongoDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/mongodb.mdc) - Document-oriented NoSQL database.
+- [MongoDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/mongodb.mdc) - Comprehensive best practices for MongoDB applications covering schema design, data modeling, indexing strategies, and performance optimization for scalable document-based databases.
 - [Neo4j](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/neo4j.mdc) - Graph database management system.
 - [Peewee](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/peewee.mdc) - Small, expressive ORM for Python.
-- [PostgreSQL](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/postgresql.mdc) - Object-relational database system.
+- [PostgreSQL](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/postgresql.mdc) - Best practices and coding standards for PostgreSQL, covering data integrity, performance optimization, security considerations, and formatting guidelines for maintainable database code.
 - [Prisma](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/prisma.mdc) - Next-generation ORM for Node.js and TypeScript.
-- [Redis](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/redis.mdc) - In-memory data structure store.
-- [SQLAlchemy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlalchemy.mdc) - SQL toolkit and Object-Relational Mapping system for Python.
-- [SQLite](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlite.mdc) - Embedded relational database management system.
+- [Redis](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/redis.mdc) - Best practices for working with Redis covering connection management, data structures, caching strategies, and performance optimization techniques for efficient in-memory data operations.
+- [SQLAlchemy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlalchemy.mdc) - Best practices for SQLAlchemy covering ORM patterns, query optimization, connection management, and security considerations for maintainable database interactions in Python.
+- [SQLite](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlite.mdc) - Comprehensive guidance for SQLite development covering schema design, query optimization, transaction management, and security practices for efficient embedded database applications.
 - [Tortoise ORM](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/tortoise-orm.mdc) - Easy-to-use asyncio ORM for Python.
 
 ## AI & Machine Learning
@@ -193,7 +195,7 @@
 - [Hugging Face](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/huggingface.mdc) - AI platform for building, training, and deploying ML models.
 - [JAX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/jax.mdc) - Numerical computing library for machine learning.
 - [Keras](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/keras.mdc) - Deep learning API.
-- [LangChain](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/langchain.mdc) - Framework for developing LLM-powered applications.
+- [LangChain](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/langchain.mdc) - Best practices for developing LangChain applications covering code organization, performance optimization, security considerations, and patterns for building maintainable LLM-powered applications.
 - [LangChain JS](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/langchain-js.mdc) - JavaScript version of LangChain.
 - [LangGraph](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/langgraph.mdc) - Library for building stateful, multi-actor applications with LLMs.
 - [LightGBM](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/lightgbm.mdc) - Gradient boosting framework.
@@ -202,15 +204,15 @@
 - [MLX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/mlx.mdc) - Array framework for machine learning on Apple silicon.
 - [Modal](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/modal.mdc) - End-to-end stack for cloud/ML compute.
 - [NLTK](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nltk.mdc) - Natural Language Toolkit.
-- [NumPy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/numpy.mdc) - Library for large, multi-dimensional arrays and matrices.
+- [NumPy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/numpy.mdc) - Best practices for using NumPy in scientific computing and data science covering array operations, vectorization techniques, and performance optimization for efficient numerical computing.
 - [OpenAI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/openai.mdc) - API for accessing OpenAI models.
-- [Pandas](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pandas.mdc) - Data analysis and manipulation library.
-- [PyTorch](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pytorch.mdc) - Machine learning framework.
-- [scikit-learn](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/scikit-learn.mdc) - Machine learning library.
-- [SciPy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/scipy.mdc) - Scientific computing library.
+- [Pandas](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pandas.mdc) - Best practices for writing high-quality pandas code covering performance optimization, data handling techniques, and patterns for maintainable data analysis workflows.
+- [PyTorch](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pytorch.mdc) - Comprehensive guidelines for PyTorch development covering code organization, performance optimization, GPU utilization, model architecture patterns, and best practices for maintainable deep learning code.
+- [scikit-learn](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/scikit-learn.mdc) - Best practices and coding standards for scikit-learn projects covering model selection, evaluation, preprocessing, and performance optimization techniques for effective machine learning workflows.
+- [SciPy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/scipy.mdc) - Coding standards and best practices for scientific computing with SciPy emphasizing clarity, maintainability, performance optimization, and implementation principles.
 - [SmolAgents](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/smolagents.mdc) - Small, efficient AI agents framework.
 - [spaCy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/spacy.mdc) - Industrial-strength natural language processing.
-- [TensorFlow](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/tensorflow.mdc) - End-to-end open source platform for machine learning.
+- [TensorFlow](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/tensorflow.mdc) - Comprehensive guide to TensorFlow best practices covering code organization, performance optimization, model architecture, and security considerations for robust machine learning projects.
 - [Tinygrad](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/tinygrad.mdc) - Deep learning framework.
 - [Transformers](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/transformers.mdc) - State-of-the-art Machine Learning for NLP.
 - [vLLM](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/vllm.mdc) - High-throughput and memory-efficient inference and serving engine.
@@ -218,15 +220,15 @@
 
 ## DevOps & Infrastructure
 
-- [Ansible](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ansible.mdc) - IT automation platform.
+- [Ansible](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ansible.mdc) - Comprehensive best practices for Ansible projects covering playbook structure, role organization, variable management, and security considerations for maintainable infrastructure automation.
 - [CircleCI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/circleci.mdc) - Continuous integration and delivery platform.
-- [Docker](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/docker.mdc) - Platform for developing, shipping, and running applications.
+- [Docker](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/docker.mdc) - Comprehensive guidance on Docker best practices covering Dockerfile construction, image optimization, security considerations, and multi-container orchestration for efficient containerized applications.
 - [GitHub Actions](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/github-actions.mdc) - CI/CD platform.
 - [GitLab CI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/gitlab-ci.mdc) - Continuous integration service.
 - [Jenkins](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/jenkins.mdc) - Open source automation server.
-- [Kubernetes](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/kubernetes.mdc) - Container orchestration system.
+- [Kubernetes](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/kubernetes.mdc) - Comprehensive best practices for developing and operating Kubernetes applications covering infrastructure management, security hardening, resource optimization, and deployment strategies.
 - [NGINX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nginx.mdc) - Web server.
-- [Terraform](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/terraform.mdc) - Infrastructure as code software tool.
+- [Terraform](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/terraform.mdc) - Guidelines for Terraform best practices covering state management, naming conventions, modularization techniques, and security considerations for maintainable infrastructure-as-code.
 
 ## Development Tools & Libraries
 
@@ -247,7 +249,7 @@
 - [ESLint](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/eslint.mdc) - JavaScript linter.
 - [FFmpeg](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ffmpeg.mdc) - Media manipulation tool.
 - [Flake8](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/flake8.mdc) - Python code linter.
-- [Git](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/git.mdc) - Version control system.
+- [Git](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/git.mdc) - Best practices for effective Git usage covering commit strategies, branching models, collaborative workflows, and version control techniques for maintainable project history.
 - [Godot](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/godot.mdc) - Open source game engine.
 - [Google Maps JS](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/google-maps-js.mdc) - JavaScript API for Google Maps.
 - [Gradle](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/gradle.mdc) - Build automation tool.
