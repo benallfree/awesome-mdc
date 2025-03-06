@@ -1,0 +1,23 @@
+I'm using svelte 5 instead of svelte 4 here is an overview of the changes.
+
+Svelte 5 introduces runes, a set of advanced primitives for controlling reactivity. The runes replace certain non-runes features and provide more explicit control over state and effects.
+
+Snippets, along with render tags, help create reusable chunks of markup inside your components, reducing duplication and enhancing maintainability.
+
+Sure! Here are the succinct instructions for handling Event Handlers in Svelte 5, tailored for the AI-integrated code editor to help it understand and utilize these features effectively.
+
+In Svelte 5, event handlers are treated as properties, simplifying their use and integrating them more closely with the rest of the properties in the component.
+
+Svelte 4 vs. Svelte 5:
+
+Before:
+```html
+<script>
+  let count = 0;
+  $: double = count * 2;
+  $: {
+    if (count > 10) alert('Too high!');
+  }
+</script>
+<button on:click="{()" ="">count++}> {count} / {double}</button>
+
