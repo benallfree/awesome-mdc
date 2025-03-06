@@ -8,7 +8,7 @@
 
 ## Contents
 
-- [MCP](#mcp)
+- [MCP](#mcp)-
 - [Development Standards](#development-standards)
 - [Debugging & Troubleshooting](#debugging--troubleshooting)
 - [Documentation & Knowledge Management](#documentation--knowledge-management)
@@ -26,7 +26,7 @@
 - [Other Tools](#other-tools)
 - [Credits](#credits)
 
-## MCP
+## Model Context Protocol ([MCP](https://modelcontextprotocol.io/))
 
 - [Logo Gen (FAL)](https://github.com/sshtunnelvision/MCP-LOGO-GEN) - Logo generation capabilities using FAL AI, with tools for image generation, background removal, and automatic scaling.
 
@@ -161,27 +161,27 @@
 
 ## Programming Languages
 
-- [Bash](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bash.mdc) - Unix shell and command language.
-- [C#](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/c-sharp.mdc) - General-purpose programming language.
+- [Bash](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bash.mdc) - Best practices and coding standards for Bash scripting covering naming conventions, error handling, security considerations, and performance optimization for robust shell scripts.
+- [C#](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/c-sharp.mdc) - Comprehensive guide to C# best practices covering coding standards, design patterns, performance considerations, and security best practices for building maintainable .NET applications.
 - [Go](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/go.mdc) - Comprehensive guide to Go development covering idiomatic code patterns, performance optimization, error handling strategies, and concurrency best practices.
 - [Java](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/java.mdc) - Best practices for Java development covering code style, object-oriented design patterns, performance optimization, and guidelines for writing clean, maintainable code.
-- [PHP](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/php.mdc) - Server-side scripting language.
+- [PHP](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/php.mdc) - Guidelines for PHP coding best practices covering code structure, security considerations, performance optimization, and testing strategies for maintainable web applications.
 - [Python](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/python.mdc) - Comprehensive guidelines for Python development covering code organization, performance, security, testing, and best practices for maintaining clean, efficient codebases.
-- [Ruby](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ruby.mdc) - Dynamic, object-oriented programming language.
+- [Ruby](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ruby.mdc) - Comprehensive best practices for Ruby development covering code organization, design patterns, metaprogramming techniques, and testing strategies for high-quality applications.
 - [Rust](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/rust.mdc) - Comprehensive guide to Rust development covering ownership model, concurrency patterns, memory safety, and idioms for writing efficient, secure systems code.
-- [Solidity](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/solidity.mdc) - Object-oriented programming language for Ethereum.
+- [Solidity](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/solidity.mdc) - Best practices for Solidity smart contract development covering security patterns, gas optimization, and auditing techniques for building reliable blockchain applications.
 - [TypeScript](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/typescript.mdc) - Best practices and coding standards for TypeScript development, including guidelines on type safety, performance optimization, and patterns for writing clean, maintainable code.
-- [Zsh](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/zsh.mdc) - Extended Bourne shell.
+- [Zsh](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/zsh.mdc) - Best practices for Zsh scripting covering shell optimization, completion system, configuration patterns, and interactive shell features for enhanced productivity.
 
 ## Data Storage & Databases
 
-- [DuckDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/duckdb.mdc) - In-process SQL OLAP database management system.
-- [Elasticsearch](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/elasticsearch.mdc) - Distributed, RESTful search and analytics engine.
+- [DuckDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/duckdb.mdc) - Best practices for developing with DuckDB covering query optimization, data import/export techniques, and performance considerations for analytics applications.
+- [Elasticsearch](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/elasticsearch.mdc) - Comprehensive best practices for Elasticsearch covering query optimization, indexing strategies, cluster management, and performance tuning for efficient search applications.
 - [MongoDB](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/mongodb.mdc) - Comprehensive best practices for MongoDB applications covering schema design, data modeling, indexing strategies, and performance optimization for scalable document-based databases.
-- [Neo4j](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/neo4j.mdc) - Graph database management system.
+- [Neo4j](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/neo4j.mdc) - Best practices for Neo4j development covering graph modeling, Cypher query optimization, and indexing strategies for efficient graph database applications.
 - [Peewee](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/peewee.mdc) - Small, expressive ORM for Python.
 - [PostgreSQL](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/postgresql.mdc) - Best practices and coding standards for PostgreSQL, covering data integrity, performance optimization, security considerations, and formatting guidelines for maintainable database code.
-- [Prisma](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/prisma.mdc) - Next-generation ORM for Node.js and TypeScript.
+- [Prisma](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/prisma.mdc) - Best practices for Prisma ORM covering schema design, data access patterns, security considerations, and type-safe database operations for Node.js applications.
 - [Redis](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/redis.mdc) - Best practices for working with Redis covering connection management, data structures, caching strategies, and performance optimization techniques for efficient in-memory data operations.
 - [SQLAlchemy](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlalchemy.mdc) - Best practices for SQLAlchemy covering ORM patterns, query optimization, connection management, and security considerations for maintainable database interactions in Python.
 - [SQLite](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/sqlite.mdc) - Comprehensive guidance for SQLite development covering schema design, query optimization, transaction management, and security practices for efficient embedded database applications.
@@ -236,7 +236,7 @@
 - [AsyncIO](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/asyncio.mdc) - Asynchronous I/O framework for Python.
 - [BeautifulSoup4](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/beautifulsoup4.mdc) - Library for parsing HTML and XML.
 - [Black](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/black.mdc) - Python code formatter.
-- [Boto3](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/boto3.mdc) - AWS SDK for Python.
+- [Boto3](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/boto3.mdc) - Best practices for using the AWS SDK in Python covering service integration patterns, error handling, resource management, and security principles for building cloud applications.
 - [Bun](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bun.mdc) - JavaScript runtime and toolkit.
 - [Click](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/click.mdc) - Command line interface creation kit for Python.
 - [CUDA](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/cuda.mdc) - Parallel computing platform.
