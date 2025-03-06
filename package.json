@@ -3,10 +3,11 @@
   "description": "A curated list of awesome projects and resources for MDC",
   "version": "1.0.0",
   "scripts": {
-    "lint": "awesome-lint README.md  && markdownlint-cli2 README.md && lychee --max-retries=10 --retry-wait-time=60 --max-concurrency=10 -vv README.md"
+    "lint": "awesome-lint README.md  && markdownlint-cli2 README.md && cspell-cli README.md && lychee --max-retries=10 --retry-wait-time=60 --max-concurrency=10 -vv README.md "
   },
   "devDependencies": {
     "awesome-lint": "^1.2.0",
+    "cspell-cli": "^8.17.3",
     "lychee": "^0.2.12",
     "markdownlint-cli2": "^0.17.2",
     "prettier": "^3.5.3"

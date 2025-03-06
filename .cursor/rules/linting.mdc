@@ -3,5 +3,6 @@ description: Rules for the updating README.md
 globs: README.md
 ---
 
+* Check for spelling errors
 * Run `bun lint` after every modification to `README.md` and continue editing until lint is satisfied.
 
