@@ -1,0 +1,70 @@
+---
+description: Ensures that code changes are accompanied by relevant documentation references
+globs: ["**/*.{rb,js,erb,html,css,scss}"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Documentation Reference Rule
+# Ensures all code changes are properly documented with references to official documentation
+
+<rule>
+name: documentation_reference
+description: Enforces the inclusion of documentation references when making code changes
+filters:
+  - type: event
+    pattern: "code_change"
+  - type: content
+    pattern: "(?i)(rails|hotwire|stimulus|turbo|propshaft|tailwind)"
+actions:
+  - type: suggest
+    message: |
+      Please include references to relevant documentation:
+
+      1. Documentation Sources:
+         - Rails Guides: https://guides.rubyonrails.org/
+         - Rails API: https://api.rubyonrails.org/
+         - Hotwire Handbook: https://hotwired.dev/
+         - Stimulus Reference: https://stimulus.hotwired.dev/
+         - Turbo Handbook: https://turbo.hotwired.dev/
+         - Propshaft Guide: https://github.com/rails/propshaft#readme
+         - Tailwind CSS: https://tailwindcss.com/docs
+         - Other included in cursor
+
+      2. Required Documentation References:
+         - [ ] Link to relevant guide/documentation
+         - [ ] Specific section reference if applicable
+         - [ ] Code example from documentation if relevant
+         - [ ] Any deviations from documented patterns
+
+      3. Implementation Notes:
+         - Document WHY changes deviate from standard patterns
+         - Include version-specific considerations
+         - Note any deprecation warnings or upcoming changes
+
+      4. Local Documentation:
+         - Update relevant local documentation
+         - Cross-reference with existing docs
+         - Add examples for team reference
+
+examples:
+  - input: |
+      "Updating Stimulus controller setup"
+    output: |
+      Following Stimulus Handbook (https://stimulus.hotwired.dev/handbook/installing):
+      - Controller Registration: https://stimulus.hotwired.dev/reference/controllers
+      - Application Configuration: https://stimulus.hotwired.dev/reference/application
+  - input: |
+      "Configuring Propshaft assets"
+    output: |
+      Following Propshaft README (https://github.com/rails/propshaft#readme):
+      - Asset Pipeline Configuration
+      - Manifest Compilation
+      - Development vs Production considerations
+metadata:
+  priority: high
+  version: 1.0
+  tags:
+    - documentation
+    - best-practices
+    - code-quality
+</rule>

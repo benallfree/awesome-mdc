@@ -1,0 +1,90 @@
+---
+description: Guidelines for safe and efficient log checking
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Log Checking Rule
+# Guidelines for safe and efficient log checking
+
+<rule>
+name: log_checking
+description: Rules for checking logs safely and efficiently
+filters:
+  - type: command
+    pattern: "tail|grep|log"
+actions:
+  - type: suggest
+    message: |
+      Log Checking Guidelines:
+
+      1. Time-Limited Checks:
+         - NEVER use indefinite tail -f commands
+         - Always use timeout command with 5s limit
+         - Use head/tail with specific line counts
+         - Limit grep output
+
+      2. Command Structure:
+         ```bash
+         # ✅ Good - with timeout and line limit
+         timeout 5s tail -n 50 log/development.log | grep -i "pattern"
+
+         # ✅ Good - with specific time window
+         grep -i "pattern" log/development.log | tail -n 20
+
+         # ❌ Bad - indefinite wait
+         tail -f log/development.log | grep "pattern"
+         ```
+
+      3. Pattern-Based Searches:
+         - Use specific grep patterns
+         - Include timestamps in search
+         - Filter by log level (ERROR, WARN, etc.)
+         - Use context flags (-A, -B, -C) with limits
+
+      4. Error Analysis:
+         - Check most recent errors first
+         - Use specific time windows
+         - Focus on relevant error types
+         - Capture context around errors
+
+      5. Standard Commands:
+         ```bash
+         # Recent errors
+         grep -i "error" log/development.log | tail -n 20
+
+         # Pattern with context
+         grep -i -C 3 "pattern" log/development.log | tail -n 50
+
+         # Time-based check
+         find log -mmin -30 -type f -exec grep -i "pattern" {} \;
+         ```
+
+      Remember:
+      - Never use indefinite tail commands
+      - Always set timeouts
+      - Use specific search patterns
+      - Limit output lines
+      - Focus on recent entries first
+
+examples:
+  - input: |
+      tail -f log/development.log | grep "error"
+    output: |
+      ❌ Unsafe - Use timeout and line limits:
+      timeout 5s tail -n 50 log/development.log | grep -i "error"
+
+  - input: |
+      grep "pattern" log/development.log
+    output: |
+      ❌ Unlimited output - Add line limit:
+      grep "pattern" log/development.log | tail -n 50
+
+metadata:
+  priority: high
+  version: 1.0
+  tags:
+    - logging
+    - debugging
+    - safety
+</rule> 

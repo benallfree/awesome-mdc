@@ -1,0 +1,97 @@
+---
+description: Ensures explicit acknowledgment of which rules are being followed and which are not relevant
+globs: ["**/*"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Rule Acknowledgment and Relevance Tracking
+# Ensures transparency in rule application and relevance
+
+<rule>
+name: rule_acknowledgment
+description: Enforces explicit acknowledgment of rule relevance and application in responses
+filters:
+  - type: event
+    pattern: "response_start"
+  - type: content
+    pattern: "(?i)(implement|change|update|modify|create|setup|configure)"
+actions:
+  - type: suggest
+    message: |
+      Please acknowledge rules at the start of your response:
+
+      1. Rule Review Structure:
+         ```markdown
+         ### Rule Acknowledgment
+         
+         **Relevant Rules Applied:**
+         - [Rule Name]: How it's being applied
+         - [Another Rule]: Specific application details
+         
+         **Rules Considered But Not Relevant:**
+         - [Rule Name]: Why it's not applicable
+         - [Another Rule]: Reason for non-relevance
+         
+         **Implementation Following:**
+         [Your implementation details...]
+         ```
+
+      2. Required Components:
+         - [ ] List all rules considered
+         - [ ] Explicitly state which rules are being followed
+         - [ ] Explain why certain rules aren't relevant
+         - [ ] Reference specific sections of applied rules
+         - [ ] Note any rule conflicts or priority decisions
+
+      3. Rule Application Notes:
+         - Document any rule adaptations
+         - Note version-specific rule considerations
+         - Highlight any rule overlap handling
+         - Explain priority decisions when rules conflict
+
+      4. Rule Documentation Updates:
+         - Note any needed rule clarifications
+         - Suggest rule improvements based on application
+         - Document any rule conflicts discovered
+         - Track rule effectiveness
+
+examples:
+  - input: |
+      "Updating a component structure"
+    output: |
+      ### Rule Acknowledgment
+      
+      **Relevant Rules Applied:**
+      - documentation-reference: Following documentation linking requirements
+      - component-structure: Applying component organization standards
+      
+      **Rules Considered But Not Relevant:**
+      - database-management: No database changes involved
+      - api-versioning: Not touching API endpoints
+      
+      **Implementation Following:**
+      [Component update details...]
+  - input: |
+      "Setting up new feature"
+    output: |
+      ### Rule Acknowledgment
+      
+      **Relevant Rules Applied:**
+      - feature-planning: Following feature setup checklist
+      - testing-standards: Implementing required test coverage
+      
+      **Rules Considered But Not Relevant:**
+      - migration-safety: No database migrations needed
+      - cache-management: No caching requirements yet
+      
+      **Implementation Following:**
+      [Feature setup details...]
+metadata:
+  priority: high
+  version: 1.0
+  tags:
+    - process
+    - documentation
+    - rule-management
+    - transparency
+</rule>

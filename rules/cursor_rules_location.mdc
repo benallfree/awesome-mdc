@@ -1,0 +1,210 @@
+---
+description: Enforces the location and naming conventions for all other .cursorrules files.  This is the MOST IMPORTANT rule.
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Cursor Rules Location
+# Enforces the location and naming conventions for all other .cursorrules files.  This is the MOST IMPORTANT rule.
+<rule>
+name: cursor_rules_location
+description: Standards for placing Cursor rule files in the correct directory
+filters:
+  - type: file_extension
+    pattern: "\\.mdc$"
+  - type: content
+    pattern: "(?s)<rule>.*?</rule>" # Matches anything between <rule> tags, even across multiple lines
+  - type: event
+    pattern: "file_create"
+actions:
+  - type: reject
+    conditions:
+      - pattern: "^(?!\\.\\/\\.cursor\\/rules\\/.*\\.mdc$)" # Negative lookahead: rejects if NOT in .cursor/rules/
+        message: "Cursor rule files (.mdc) must be placed in the .cursor/rules directory"
+  - type: suggest
+    message: |
+      When creating Cursor rules:
+
+      1. Always place rule files in PROJECT_ROOT/.cursor/rules/:
+         ```
+         .cursor/rules/
+         ├── your-rule-name.mdc
+         ├── another-rule.mdc
+         └── ...
+         ```
+
+      2. Follow the naming convention:
+         - Use kebab-case for filenames (e.g., my-rule-name.mdc)
+         - Always use the .mdc extension
+         - Make names descriptive of the rule's purpose
+
+      3.  Organize rules into subdirectories within .cursor/rules/ if needed for larger projects:
+          ```
+          .cursor/rules/
+          ├── coding-style/
+          │   ├── python-style.mdc
+          │   └── javascript-style.mdc
+          ├── git/
+          │   └── commit-messages.mdc
+          └── ...
+          ```
+
+      4. Never place rule files:
+         - In the project root
+         - In subdirectories outside .cursor/rules (or its subdirectories)
+         - In any other location
+
+      5. File Creation Best Practices:
+         - Due to potential issues with direct file creation, use the following printf approach:
+           ```bash
+           printf '%s\n' '---' 'description: Your description' 'globs: ["your/globs/**/*.{ext}"]' '---' '# Your Rule Title' '' '<rule>' 'name: your_rule_name' '...' '</rule>' > .cursor/rules/your-rule.mdc
+           ```
+         - This ensures proper YAML frontmatter and content formatting
+         - Avoid using echo with heredoc as it may cause formatting issues
+         - Always verify the file content after creation using `cat`
+
+## File Creation Troubleshooting
+
+When creating rule files, you may encounter several common issues. Here are the workarounds:
+
+1. **Two-Step Creation Process**
+   ```bash
+   # Step 1: Create file with basic structure
+   printf '%s\n' '---' 'name: rule_name' 'description: Rule description' 'version: 1.0.0' 'author: Author Name' "date: $(date '+%Y-%m-%d')" 'globs:' '  - "glob/pattern/**/*.ext"' 'tags:' '  - tag1' '  - tag2' '---' > .cursor/rules/rule-name.mdc
+
+   # Step 2: Append rule content
+   cat << 'EOF' >> .cursor/rules/rule-name.mdc
+
+   # Rule Title
+
+   <rule>
+   name: rule_name
+   description: Detailed description
+   filters:
+     - type: file_extension
+       pattern: "pattern"
+   actions:
+     - type: suggest
+       message: |
+         Your message here
+   </rule>
+   EOF
+   ```
+
+2. **Temporary File Method**
+   ```bash
+   # Create content in temporary file
+   TMP_FILE=$(mktemp)
+   cat > "$TMP_FILE" << 'EOF'
+   ---
+   name: rule_name
+   description: Rule description
+   version: 1.0.0
+   author: Author Name
+   date: YYYY-MM-DD
+   globs:
+     - "glob/pattern/**/*.ext"
+   tags:
+     - tag1
+     - tag2
+   ---
+
+   # Rule Title
+
+   <rule>
+   ...
+   </rule>
+   EOF
+
+   # Move to final location
+   mv "$TMP_FILE" .cursor/rules/rule-name.mdc
+   ```
+
+3. **Content Verification**
+   ```bash
+   # After creating file, always verify:
+   cat .cursor/rules/rule-name.mdc
+   
+   # Check YAML frontmatter
+   head -n 10 .cursor/rules/rule-name.mdc
+   
+   # Verify rule tags
+   grep -A 1 -B 1 '<rule>' .cursor/rules/rule-name.mdc
+   grep -A 1 -B 1 '</rule>' .cursor/rules/rule-name.mdc
+   ```
+
+4. **Common Issues and Solutions**
+
+   a. **YAML Frontmatter Issues**
+      - Always include empty lines after `---`
+      - Use consistent indentation (2 spaces)
+      - Verify no trailing spaces
+      ```yaml
+      ---
+      name: rule_name
+      description: Description
+      ---
+
+      # Content starts here
+      ```
+
+   b. **Rule Tag Issues**
+      - Ensure proper spacing around tags
+      - Keep tags on their own lines
+      ```
+      <rule>
+      name: rule_name
+      ...
+      </rule>
+      ```
+
+   c. **Content Formatting**
+      - Use `|` for multiline strings in YAML
+      - Preserve indentation in code blocks
+      - Use consistent line endings
+
+5. **Recovery Steps**
+   If a file becomes corrupted:
+   ```bash
+   # Backup existing file
+   cp .cursor/rules/rule-name.mdc .cursor/rules/rule-name.mdc.bak
+   
+   # Create new file with correct structure
+   printf '%s\n' '---' 'name: rule_name' ... > .cursor/rules/rule-name.mdc
+   
+   # Copy content from backup, fixing formatting
+   sed -n '/^# Rule/,$p' .cursor/rules/rule-name.mdc.bak >> .cursor/rules/rule-name.mdc
+   ```
+
+Remember:
+- Always create files in `.cursor/rules/`
+- Use consistent formatting
+- Verify file content after creation
+- Keep backups of important rules
+- Test rule files before committing
+
+examples:
+  - input: |
+      # Bad: Rule file in wrong location
+      rules/my-rule.mdc
+      my-rule.mdc
+      .rules/my-rule.mdc
+      .cursor/rules/my-rule/my-rule.mdc # Too deep, but .cursor/rules/my-rule.mdc is good.
+
+      # Good: Rule file in correct location
+      .cursor/rules/my-rule.mdc
+      .cursor/rules/category/my-rule.mdc
+    output: "Correctly placed Cursor rule file"
+metadata:
+  priority: critical  # This rule MUST be enforced.
+  version: 1.1  # Updated version to reflect new file creation guidelines
+  changelog:
+    - version: 1.1
+      changes:
+        - Added file creation best practices section
+        - Added printf approach for reliable file creation
+        - Added note about verifying file content
+    - version: 1.0
+      changes:
+        - Initial version
+</rule>

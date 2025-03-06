@@ -1,0 +1,176 @@
+---
+description: Rails 8 specific rules and guidelines for the Social Script project. These rules complement the main .cursorrules file with detailed Rails-specific practices.
+globs: ["*.rb", "*.erb", "*.rake", "Gemfile", "Rakefile", "config/**/*.yml", "config/**/*.rb", "db/migrate/*.rb", "app/**/*"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Your rule content
+
+- You can @ files here
+- You can use markdown but dont have to
+
+# Rails 8 Development Guidelines
+
+## 1. Rails 8 Core Features
+
+** Prefer the command line utilities to manually generated code ** 
+
+e.g use `rails generate model` instead of creating a model from scratch
+
+** IMPORTANT: Server Management **
+- Always use `bin/dev` to start the server (uses Procfile.dev)
+- Check logs after every significant change
+- Monitor development.log for errors and performance issues
+- Use `tail -f log/development.log` for real-time monitoring
+- Review logs before considering any change complete
+
+1. **Modern Infrastructure**
+   - Use Thruster for asset compression and caching
+   - Implement Kamal 2 for deployment orchestration
+   - Utilize Solid Queue for background job processing
+   - Leverage Solid Cache for caching
+   - Use Solid Cable for real-time features
+   - Configure healthcheck silencing in production logs
+
+2. **Database Best Practices**
+   - Use PostgreSQL full-text search capabilities
+   - Configure proper database extensions in database.yml
+   - Implement database partitioning for large datasets
+   - Use proper database indexing strategies
+   - Configure connection pooling
+   - Implement proper backup strategies
+   - Use PostgreSQL-specific features (arrays, jsonb, etc)
+   - Monitor and optimize query performance
+
+3. **Controller Patterns**
+   - Use `params.expect()` for safer parameter handling
+   - Implement rate limiting via cache store
+   - Use the new sessions generator for authentication
+   - Silence healthcheck requests in production
+   - Keep controllers RESTful and focused
+   - Use service objects for complex business logic
+
+4. **Progressive Web App Features**
+   - Utilize default PWA manifest
+   - Implement service worker functionality
+   - Configure browser version requirements
+   - Use `allow_browser` to set minimum versions
+   - Implement offline capabilities
+   - Configure proper caching strategies
+
+## 2. Development Standards
+
+1. **Code Organization**
+   - Follow Single Responsibility Principle
+   - Use service objects for complex business logic
+   - Keep controllers skinny
+   - Use concerns for shared functionality
+   - Use `params.expect()` instead of strong parameters
+   - Follow Rails 8 conventions
+
+2. **Performance**
+   - Use Thruster for asset compression
+   - Implement proper caching with Solid Cache
+   - Configure connection pooling
+   - Use Solid Queue for background jobs
+   - Monitor application metrics
+   - Regular performance profiling
+   - Optimize database queries
+   - Use proper indexing strategies
+
+3. **Testing**
+   - Write comprehensive RSpec tests
+   - Use factories instead of fixtures
+   - Test happy and edge cases
+   - Keep tests DRY but readable
+   - Use parallel testing by default
+   - Regular security testing
+   - Performance testing
+   - Load testing for critical paths
+
+4. **Security**
+   - Use `params.expect()` for parameter handling
+   - Implement proper authorization
+   - Sanitize user input
+   - Follow OWASP guidelines
+   - Configure rate limiting via cache store
+   - Regular security audits
+   - Keep dependencies updated
+   - Use secure communication (HTTPS)
+
+5. **Hotwire Patterns**
+   - Use Turbo Frames for partial page updates
+   - Use Turbo Streams for real-time updates
+   - Keep Stimulus controllers focused and simple
+   - Use data attributes for JavaScript hooks
+   - Use Solid Cable for real-time features
+
+6. **Deployment**
+   - Use Kamal 2 for deployment orchestration
+   - Configure healthcheck silencing
+   - Use Propshaft for asset pipeline
+   - Implement PWA features by default
+   - Use devcontainer for development
+   - Implement blue-green deployments
+   - Configure proper health checks
+   - Set up monitoring and alerts
+
+7. **Logging and Monitoring**
+   - Check logs after every code change
+   - Monitor development.log for errors
+   - Use `tail -f log/development.log` for real-time monitoring
+   - Review logs before marking tasks as complete
+   - Set up proper log rotation
+   - Configure log levels appropriately
+   - Monitor performance metrics
+   - Track error rates and patterns
+
+## 3. Directory Structure
+
+```
+/app
+├── components/     # View components
+│   └── ui/         # UI components
+├── controllers/    # Controllers
+├── models/         # Active Record models
+├── views/          # View templates
+├── helpers/        # View helpers
+├── javascript/     # Stimulus controllers
+│   └── controllers/
+├── services/       # Service objects
+├── policies/       # Pundit policies
+├── jobs/          # Background jobs
+├── mailers/       # Action Mailer classes
+└── assets/        # Assets (if not using importmap)
+```
+
+## 4. Tech Stack
+
+- **Backend**: Ruby on Rails 8
+- **Frontend**: Hotwire (Turbo + Stimulus)
+- **Styling**: Tailwind CSS
+- **Database**: PostgreSQL (via Docker)
+- **Testing**: RSpec, Capybara
+- **Background Jobs**: Solid Queue (default in Rails 8)
+- **Caching**: Solid Cache (default in Rails 8)
+- **Real-time**: Solid Cable
+- **Authentication**: Built-in Sessions Generator
+- **Authorization**: Pundit
+- **Deployment**: Kamal 2 (default in Rails 8)
+- **Asset Pipeline**: Propshaft (default in Rails 8)
+- **Container**: Docker (development & production)
+
+## 5. Rails-Specific Reminders
+
+1. Use `--skip-solid` if not using Solid Stack
+2. Configure healthcheck silencing in production
+3. Ensure Docker services are running before development
+4. Follow the new Rails 8 maintenance policy
+5. Keep dependencies updated
+6. Monitor application performance
+7. Regular security audits
+8. Use `params.expect()` instead of strong parameters
+9. Use Propshaft for asset pipeline
+10. Implement PWA features by default
+11. Always use `bin/dev` to start the server
+12. Check logs after every significant change

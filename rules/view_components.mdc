@@ -1,0 +1,185 @@
+---
+description: This rule file establishes standards for ViewComponent usage in the Social Script project. It complements the main `.cursorrules` file with specific ViewComponent practices
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+---
+name: view_components
+description: Standards for ViewComponent usage in the Social Script project
+version: 1.1.0
+author: Dan
+date: 2024-02-10
+globs: 
+  - app/components/**/*_component.rb
+  - app/components/**/*_component.html.erb
+tags:
+  - components
+  - view_components
+  - ui
+  - standards
+---
+
+# ViewComponent Standards for Social Script Project
+
+## Overview
+
+This rule file establishes standards for ViewComponent usage in the Social Script project. It complements the main `.cursorrules` file with specific ViewComponent practices.
+
+## Key Rules
+
+1. **Directory Structure**
+   - All components MUST be in `app/components/`
+   - UI components MUST be in `app/components/ui/`
+   - Namespace directories MUST match module structure
+   - Each component MUST have its own directory matching its name
+     ```
+     app/components/ui/episodes/row/
+     ├── row_component.rb
+     └── row_component.html.erb
+     ```
+
+2. **Component Movement and Refactoring**
+   - ❌ NEVER recreate components in new locations manually
+   - ✅ ALWAYS use CLI commands to move components:
+     ```bash
+     # Moving a component
+     mv app/components/episodes/row_component.rb app/components/ui/episodes/row/row_component.rb
+     mv app/components/episodes/row_component.html.erb app/components/ui/episodes/row/row_component.html.erb
+     ```
+   - This preserves:
+     - Git history
+     - File timestamps
+     - Exact content matching
+     - Proper permissions
+
+3. **File Organization**
+   - ❌ NEVER create separate module definition files (e.g., ui.rb, navigation.rb)
+   - ✅ Define modules within component files
+   - One component per file
+   - File name must match class name in snake_case
+   - Each component must be in its own directory:
+     ```
+     show/
+     ├── show_component.rb
+     └── show_component.html.erb
+     ```
+
+4. **Component Structure**
+   ```ruby
+   # frozen_string_literal: true
+   
+   module UI
+     module Episodes
+       # Documentation here
+       class ComponentName < ViewComponent::Base
+         # Component code here
+       end
+     end
+   end
+   ```
+
+5. **Documentation Requirements**
+   - Class-level documentation
+   - Usage examples
+   - Parameter documentation
+   - Preview examples when applicable
+
+## Validation Steps
+
+When working with components:
+
+1. Check file location matches namespace
+2. Verify module nesting in component file
+3. Confirm component has its own directory
+4. Validate documentation presence
+5. Test component rendering
+6. Verify CLI usage for moves
+
+## Error Prevention
+
+Common issues to avoid:
+
+1. Creating separate module files
+2. Mismatching namespaces and directories
+3. Missing documentation
+4. Incomplete module nesting
+5. Manual component recreation
+6. Flat component structure
+
+## Component Movement Checklist
+
+When moving components:
+
+1. Use `mv` command for files
+2. Update all references to the component
+3. Verify git history is preserved
+4. Test component after move
+5. Update any import paths
+6. Check preview files
+
+## References
+
+- Full documentation in `docs/reference-docs/view_components.md`
+- ViewComponent configuration in `config/application.rb`
+- Component previews in `spec/components/previews`
+
+## Enforcement
+
+The AI assistant should:
+
+1. Prevent creation of separate module files
+2. Ensure proper component structure
+3. Validate documentation presence
+4. Check namespace consistency
+5. Remove any discovered module definition files
+6. Use CLI commands for moving files
+7. Enforce component directory structure
+
+## Examples
+
+### Moving a Component
+```bash
+# Bad - Don't do this
+rm old/component.rb
+touch new/component.rb
+# copy/paste content
+
+# Good - Do this
+mv old/component.rb new/component.rb
+```
+
+### Component Directory Structure
+```
+app/components/ui/episodes/
+├── row/
+│   ├── row_component.rb
+│   └── row_component.html.erb
+├── show/
+│   ├── show_component.rb
+│   └── show_component.html.erb
+└── transcript/
+    ├── transcript_component.rb
+    └── transcript_component.html.erb
+```
+
+### Component Class Structure
+```ruby
+# frozen_string_literal: true
+
+module UI
+  module Episodes
+    # Displays a single episode row with metadata and actions
+    #
+    # @example
+    #   <%= render UI::Episodes::Row::RowComponent.new(episode: @episode) %>
+    #
+    # @param episode [Episode] The episode to display
+    class RowComponent < ViewComponent::Base
+      def initialize(episode:)
+        @episode = episode
+      end
+    end
+  end
+end
+``` 

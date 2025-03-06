@@ -1,0 +1,57 @@
+---
+description: Automatically format Ruby, ERB, and related files using RuboCop and ERB Lint
+globs: ["**/*.{rb,rake,jbuilder,erb}"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Auto Format Rule for Rails Project
+# Enforces consistent code formatting using RuboCop and ERB Lint
+
+<rule>
+name: auto_format_rails
+description: Automatically format Ruby, ERB, and related files using RuboCop and ERB Lint
+filters:
+  - type: file_extension
+    pattern: "\\.(rb|rake|jbuilder|erb)$"  # Rails-specific file extensions
+  - type: event
+    pattern: "file_save"  # Trigger on file save
+actions:
+  - type: execute
+    conditions:
+      - pattern: "\\.rb$"
+        command: "bundle exec rubocop -a \"$FILE\""  # Auto-correct Ruby files
+      - pattern: "\\.erb$"
+        command: "bundle exec erblint --autocorrect \"$FILE\""  # Auto-correct ERB files
+  - type: suggest
+    message: |
+      Code formatting applied automatically:
+      - Ruby files: RuboCop auto-correct
+      - ERB files: ERB Lint auto-correct
+
+      To configure formatting rules:
+      - RuboCop: Edit .rubocop.yml
+      - ERB Lint: Edit .erb-lint.yml
+examples:
+  - input: |
+      # Bad Ruby formatting
+      def bad_method(x,y)
+        x+y
+      end
+
+      # Good Ruby formatting (after RuboCop)
+      def bad_method(x, y)
+        x + y
+      end
+  - input: |
+      # Bad ERB formatting
+      <%=@user.name%>
+
+      # Good ERB formatting (after ERB Lint)
+      <%= @user.name %>
+metadata:
+  priority: high
+  version: 1.0
+  dependencies:
+    - rubocop
+    - erb_lint
+</rule>

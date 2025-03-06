@@ -1,0 +1,170 @@
+---
+description: Rails Console Interaction Rules
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Rails Console Interaction Rules
+
+## 1. Console Testing Approach
+
+When testing functionality in Rails, follow these approaches in order of preference:
+
+1. **Use Rails Runner for Single Commands**
+   ```bash
+   bin/rails runner 'puts User.count'
+   ```
+
+2. **Use Test Files for Complex Operations**
+   ```ruby
+   # spec/lib/podcast_index_spec.rb
+   require 'rails_helper'
+   
+   RSpec.describe PodcastIndex do
+     # Test code here
+   end
+   ```
+
+3. **Create Executable Scripts**
+   ```bash
+   # bin/test_podcast_search
+   #!/usr/bin/env ruby
+   require File.expand_path('../../config/environment', __FILE__)
+   
+   # Test code here
+   ```
+
+## 2. Rails Runner Guidelines
+
+1. **Basic Command Structure**
+   ```bash
+   bin/rails runner 'command_here'
+   ```
+
+2. **Error Handling**
+   ```bash
+   bin/rails runner 'begin; command_here; rescue => e; puts "Error: #{e.message}"; end'
+   ```
+
+3. **Multiple Lines**
+   ```bash
+   bin/rails runner "
+     begin
+       # Multiple lines of code
+     rescue => e
+       puts \"Error: #{e.message}\"
+     end
+   "
+   ```
+
+## 3. Testing Scripts
+
+1. **Location**: Store in `bin/` directory
+2. **Naming**: Use descriptive names (e.g., `test_podcast_search`)
+3. **Permissions**: Make executable with `chmod +x`
+4. **Error Handling**: Always include error handling
+5. **Logging**: Include clear output messages
+
+Example:
+```bash
+#!/usr/bin/env ruby
+require File.expand_path('../../config/environment', __FILE__)
+
+def test_podcast_search
+  client = PodcastIndex::Client.new
+  results = client.search.byterm("Test Query")
+  puts "Results found: #{results.count}"
+rescue => e
+  puts "Error: #{e.message}"
+end
+
+test_podcast_search
+```
+
+## 4. Best Practices
+
+1. **NEVER** use interactive console commands
+2. **ALWAYS** use error handling
+3. **ALWAYS** provide clear output
+4. **PREFER** rails runner for simple tests
+5. **USE** test files for complex scenarios
+6. **DOCUMENT** test scripts
+
+## 5. Common Patterns
+
+### Testing Models
+```bash
+bin/rails runner 'puts User.count'
+```
+
+### Testing Services
+```bash
+bin/rails runner 'begin; result = MyService.call; puts result.inspect; rescue => e; puts "Error: #{e.message}"; end'
+```
+
+### Testing API Clients
+```bash
+bin/rails runner '
+  begin
+    client = ApiClient.new
+    result = client.fetch_data
+    puts "Success: #{result.inspect}"
+  rescue => e
+    puts "Error: #{e.message}"
+  end
+'
+```
+
+## 6. Debugging Tips
+
+1. Use `puts` for output
+2. Include stack traces in errors
+3. Use JSON.pretty_generate for complex objects
+4. Add timing information for performance testing
+
+Example:
+```bash
+bin/rails runner '
+  begin
+    start_time = Time.now
+    result = ComplexOperation.perform
+    end_time = Time.now
+    puts "Duration: #{end_time - start_time}s"
+    puts JSON.pretty_generate(result)
+  rescue => e
+    puts "Error: #{e.message}"
+    puts e.backtrace
+  end
+'
+```
+
+## 7. Documentation
+
+1. **Comment Complex Commands**
+2. **Document Expected Output**
+3. **Include Example Usage**
+4. **Note Environment Requirements**
+5. **List Required Setup**
+
+## 8. Security Considerations
+
+1. **NEVER** include sensitive data in commands
+2. **ALWAYS** sanitize output
+3. **USE** environment variables for secrets
+4. **AVOID** executing user input
+5. **VALIDATE** all inputs
+
+## 9. Maintenance
+
+1. Keep test scripts updated
+2. Remove obsolete scripts
+3. Update documentation
+4. Review for security issues
+5. Monitor performance
+
+Remember:
+- Interactive console sessions are not supported
+- Always use rails runner or test scripts
+- Include proper error handling
+- Document all test scripts
+- Keep security in mind 

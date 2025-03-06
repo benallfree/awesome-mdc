@@ -1,58 +1,41 @@
-# Awesome MDC
+# Awesome MDC [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-![Awesome](https://awesome.re/badge.svg)
+![GitHub forks](https://img.shields.io/github/stars/benallfree/awesome-mdc?style=flat) ![GitHub forks](https://img.shields.io/github/forks/benallfree/awesome-mdc?style=flat) ![GitHub forks](https://img.shields.io/github/contributors/benallfree/awesome-mdc?style=flat)
 
-A curated list of high-quality **Multi-Document Context (MDC) rules**, a Markdown-based standard for providing structured, project-specific instructions to AI models in Retrieval-Augmented Generation (RAG) contexts. Originally developed for the Cursor IDE, MDC rules are poised to become a universal approach for enhancing AI-assisted workflows across diverse tools and platforms.
+> Curated list of awesome [MDC](./what-is-mdc.md) resources.
 
----
+**Multi-Document Context (MDC)** is a Markdown-based standard for providing structured, project-specific instructions to AI models in Retrieval-Augmented Generation (RAG) contexts. Originally developed for the [Cursor IDE](https://cursor.sh), MDC rules are a universal approach for enhancing AI-assisted workflows across diverse tools and platforms.
 
-## Table of Contents
+## Contents
 
-- [What are MDC Rules?](#what-are-mdc-rules)
-- [Why Use MDC Rules?](#why-use-mdc-rules)
-- [How to Contribute](#how-to-contribute)
-- [Awesome MDC Rules](#awesome-mdc-rules)
-  - [Cursor-Specific MDC Rules](#cursor-specific-mdc-rules)
-  - [General RAG Context MDC Rules](#general-rag-context-mdc-rules)
-- [Writing Effective MDC Rules](#writing-effective-mdc-rules)
-- [License](#license)
+### Development Standards
 
----
+- [Rails 8 Development Guidelines](rules/rails.mdc) - Standards and best practices for Rails 8 development
+- [Test-Driven Development Framework](rules/test_driven_development.mdc) - Comprehensive approach to test-driven development
+- [Automatic Code Formatting](rules/auto-format.mdc) - Auto-formatting rules for Ruby, ERB, and Rails files
+- [ViewComponent Architecture](rules/view_components.mdc) - Standards for organizing and implementing ViewComponents
+- [Tailwind CSS v4 Implementation](rules/tailwind-v4.mdc) - Standards for Tailwind CSS v4 in Rails applications
 
-## What are MDC Rules?
+### Debugging & Troubleshooting
 
-MDC rules are Markdown files (typically with a `.mdc` extension) that combine:
+- [API Debugging Framework](rules/api_debugging.mdc) - Comprehensive API debugging methodology and tools
+- [Safe Log Inspection](rules/log_checking.mdc) - Guidelines for efficient and safe log checking
+- [Rails Console Interaction](rules/rails_console.mdc) - Safe patterns for Rails console testing
 
-- **Frontmatter**: A YAML section at the top with metadata, such as a description and file patterns (globs) the rule applies to.
-- **Body**: Markdown-formatted instructions, guidelines, or context that an AI can use to understand and interact with a codebase or dataset.
+### Documentation & Knowledge Management
 
-Born in the Cursor IDE’s `.cursor/rules` directory, MDC rules are now envisioned as a flexible, tool-agnostic standard for RAG contexts, where AI models retrieve and apply relevant information dynamically.
+- [Documentation Reference Standards](rules/documentation-reference.mdc) - Guidelines for including documentation references in code
+- [Documentation Memory System](rules/memory-management.mdc) - Framework for managing project documentation as memory
+- [Precision Plan Updates](rules/plan-updates.mdc) - Guidelines for making surgical, focused documentation updates
+- [Structured Problem Solving](rules/problem-solving.mdc) - Comprehensive methodology for analyzing and solving problems
 
----
+### Version Control & Workflow
 
-## Why Use MDC Rules?
+- [Git Commit Standards](rules/git_commit.mdc) - Comprehensive Git commit message and workflow guidelines
 
-- **Modularity**: Break instructions into small, reusable rules instead of relying on monolithic files.
-- **Context Awareness**: Apply rules selectively based on file patterns or project areas, keeping AI responses focused.
-- **Portability**: The Markdown format ensures compatibility with any AI tool supporting RAG.
-- **Scalability**: Ideal for complex projects, enabling tailored instructions for different components.
+### MDC Rule Management
 
----
-
-## How to Contribute
-
-Help grow MDC as a standard by contributing:
-
-1. **Create or share MDC rules**: Develop rules that showcase best practices or solve real-world problems.
-2. **Submit a pull request**: Include your `.mdc` file and a brief description of its purpose.
-3. **Document your work**: Ensure clarity for others adopting your rules.
-
-Contributions fuel this project’s mission to establish MDC as a universal RAG standard.
-
----
-
-## Awesome MDC Rules
-
-### Cursor-Specific MDC Rules
-
-These repositories highlight MDC rules designed for the Cursor IDE:
+- [MDC File Organization](rules/cursor_rules_location.mdc) - Standards for organizing and naming MDC rule files
+- [Rule Management Guidelines](rules/meta-rule-management.mdc) - Framework for creating and managing MDC rules
+- [Rule Compliance Tracking](rules/rule-acknowledgment.mdc) - Framework for tracking rule application and relevance
+- [Rule Extraction System](rules/rule-extraction.mdc) - Tools for identifying and extracting rules from documentation

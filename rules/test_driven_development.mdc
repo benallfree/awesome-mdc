@@ -1,0 +1,447 @@
+---
+description: Standards for Test-Driven Development in the Social Script project
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Test-Driven Development (TDD) Rule
+
+<rule>
+name: test_driven_development
+description: Rules and standards for Test-Driven Development
+filters:
+  - type: file_extension
+    pattern: "\\.(rb|rake)$"
+  - type: directory
+    pattern: "(spec|test|app/services)"
+  - type: content
+    pattern: "RSpec\\.describe|describe.*do"
+actions:
+  - type: suggest
+    message: |
+      Test-Driven Development Rules:
+
+      1. Spec First, Code Second:
+         - ALWAYS check for existing specs
+         - Create specs BEFORE implementation
+         - Use specs as documentation
+
+      2. Implementation Process:
+         a) Review/Create Specs
+         b) Run Specs (should fail)
+         c) Implement Code
+         d) Run Specs (should pass)
+         e) Refactor
+
+      3. Spec Structure:
+         ```ruby
+         RSpec.describe ServiceName do
+           shared_examples "behavior" do
+             it "defines functionality"
+             it "handles edge cases"
+           end
+
+           context "conditions" do
+             it "behaves correctly"
+           end
+         end
+         ```
+
+      4. Validation Steps:
+         - Check spec location
+         - Review existing specs
+         - Create missing specs
+         - Follow spec requirements
+
+      5. Error Prevention:
+         - No implementation without specs
+         - No skipping edge cases
+         - No failing specs
+         - No manual testing only
+examples:
+  - input: |
+      # Bad: Implementation without specs
+      class MyService
+        def call
+          # Code without tests
+        end
+      end
+
+      # Good: Spec first
+      RSpec.describe MyService do
+        describe "#call" do
+          it "performs the expected action"
+        end
+      end
+metadata:
+  priority: high
+  version: 1.0.0
+  changelog:
+    - version: 1.0.0
+      changes:
+        - Initial version
+        - Added core TDD principles
+        - Added spec structure examples
+        - Added validation steps
+</rule>
+
+## Implementation Guide
+
+1. **Finding Existing Specs**
+   ```bash
+   find spec/ -name "*_spec.rb" | grep $FEATURE_NAME
+   ```
+
+2. **Creating New Specs**
+   ```ruby
+   # spec/services/my_service_spec.rb
+   RSpec.describe MyService do
+     let(:subject) { described_class.new }
+
+     describe "#call" do
+       context "with valid input" do
+         it "succeeds" do
+           expect(subject.call).to be_success
+         end
+       end
+
+       context "with invalid input" do
+         it "fails gracefully" do
+           expect(subject.call).to be_failure
+         end
+       end
+     end
+   end
+   ```
+
+3. **Running Specs**
+   ```bash
+   bundle exec rspec spec/services/my_service_spec.rb
+   ```
+
+4. **Implementation**
+   ```ruby
+   # app/services/my_service.rb
+   class MyService
+     def call
+       # Implementation following spec requirements
+     end
+   end
+   ```
+
+## Best Practices
+
+1. **Spec Organization**
+   - One spec file per class/module
+   - Logical grouping of contexts
+   - Clear, descriptive test names
+
+2. **Test Coverage**
+   - Happy path scenarios
+   - Edge cases
+   - Error conditions
+   - Boundary values
+
+3. **Maintainability**
+   - DRY specs using shared examples
+   - Clear setup using let/before
+   - Isolated tests
+   - Meaningful assertions
+
+4. **Documentation**
+   - Specs serve as documentation
+   - Clear descriptions
+   - Example usage
+   - Edge case documentation
+
+## Overview
+
+This rule establishes Test-Driven Development (TDD) as the standard approach for implementing services and complex code in the Social project.
+
+## Core Principles
+
+1. **Spec First, Code Second**
+   - ALWAYS check for existing specs before modifying or creating code
+   - If no spec exists, create one BEFORE implementing the feature
+   - Use specs to define the expected behavior and interface
+
+2. **Spec Structure**
+   ```ruby
+   RSpec.describe ServiceName do
+     # Shared examples for common behavior
+     shared_examples 'expected behavior' do
+       it 'defines core functionality'
+       it 'handles edge cases'
+       it 'validates inputs'
+     end
+
+     # Context-specific test cases
+     context 'with specific conditions' do
+       it 'behaves as expected'
+     end
+   end
+   ```
+
+3. **Implementation Process**
+   a. Review existing specs (if any)
+   b. Write new specs defining expected behavior
+   c. Run specs (they should fail)
+   d. Implement code to make specs pass
+   e. Refactor while keeping specs green
+
+## Example from TranscriptFetcher
+
+Good:
+```ruby
+# First: Review transcript_parser_spec.rb
+RSpec.describe TranscriptParser::Parser do
+  let(:fixtures_path) { Rails.root.join('spec/fixtures/files') }
+  
+  shared_examples 'a transcript parser' do |format|
+    it 'returns a Transcript object'
+    it 'includes properly structured segments'
+    it 'provides access to unique speakers'
+  end
+  
+  context 'with specific format' do
+    it 'handles format correctly'
+  end
+end
+
+# Then: Implement service based on spec
+class TranscriptFetcherService
+  def call
+    # Implementation follows spec requirements
+  end
+end
+```
+
+Bad:
+```ruby
+# Writing implementation first without specs
+class TranscriptFetcherService
+  def call
+    # Implementation without clear requirements
+    # No validation of behavior
+    # No test coverage
+  end
+end
+```
+
+## Validation Steps
+
+Before implementing any service or complex code:
+
+1. **Spec Location Check**
+   ```bash
+   find spec/ -name "*_spec.rb" | grep $FEATURE_NAME
+   ```
+
+2. **Spec Review**
+   - Read all related specs
+   - Understand shared examples
+   - Note edge cases
+   - Review fixtures
+
+3. **Spec Creation (if needed)**
+   - Create spec file
+   - Define shared examples
+   - Write context-specific tests
+   - Include edge cases
+   - Add appropriate fixtures
+
+4. **Implementation**
+   - Follow spec requirements
+   - Run specs frequently
+   - Refactor when needed
+   - Maintain test coverage
+
+## Common Patterns
+
+1. **Service Specs**
+   ```ruby
+   RSpec.describe ServiceName do
+     describe '#call' do
+       context 'with valid input' do
+         it 'performs expected action'
+       end
+
+       context 'with invalid input' do
+         it 'handles errors appropriately'
+       end
+     end
+   end
+   ```
+
+2. **Model Specs**
+   ```ruby
+   RSpec.describe ModelName do
+     describe 'validations' do
+       it { should validate_presence_of(:field) }
+     end
+
+     describe 'associations' do
+       it { should belong_to(:other_model) }
+     end
+   end
+   ```
+
+## Error Prevention
+
+1. Never start implementation without specs
+2. Don't modify existing code without reviewing specs
+3. Don't skip writing tests for edge cases
+4. Don't leave failing specs unresolved
+
+## Examples
+
+### Good Process
+1. Check for specs
+2. Review existing specs
+3. Write new specs
+4. Implement feature
+5. Refactor
+
+### Bad Process
+1. Start coding immediately
+2. Test manually
+3. Fix bugs as they appear
+4. Write specs later (or never)
+
+## References
+
+- Full documentation in `docs/reference-docs/tdd.md`
+- RSpec documentation
+- Factory Bot documentation
+- VCR documentation
+
+## Enforcement
+
+The AI assistant should:
+
+1. ALWAYS check for existing specs first
+2. Suggest creating specs if none exist
+3. Follow TDD principles
+4. Reference relevant specs in responses
+5. Maintain test coverage
+6. Prevent implementation without specs
+
+## Examples
+
+### Finding Specs
+```bash
+# Good
+find spec/ -name "*transcript*_spec.rb"
+
+# Bad
+Start implementing without checking
+```
+
+## Real-World Example: Transcript Parser Recovery
+
+This example demonstrates how we recovered from an incorrect implementation approach by returning to TDD principles:
+
+### Initial Mistake (What Not To Do)
+```ruby
+# BAD: Started with implementation without specs
+class TranscriptParser
+  def parse(content)
+    # Started writing parser logic without clear requirements
+    # No test coverage for different formats
+    # No validation of expected output structure
+    # Led to confusion about expected behavior
+  end
+end
+```
+
+### TDD Recovery Process
+
+1. **Step 1: Stop and Write Specs First**
+```ruby
+# GOOD: Created comprehensive specs first
+RSpec.describe TranscriptParser do
+  let(:fixtures_path) { Rails.root.join('spec/fixtures/files') }
+  
+  shared_examples 'a transcript parser' do |format|
+    let(:content) { File.read(fixtures_path.join("sample.#{format}")) }
+    
+    it 'returns a structured transcript' do
+      result = parser.parse(content)
+      expect(result).to be_a(Transcript)
+      expect(result.segments).to all(be_a(Segment))
+    end
+    
+    it 'identifies speakers correctly' do
+      result = parser.parse(content)
+      expect(result.speakers).to include('Speaker 1', 'Speaker 2')
+    end
+    
+    it 'preserves timestamp information' do
+      result = parser.parse(content)
+      expect(result.segments.first.start_time).to be_present
+      expect(result.segments.first.end_time).to be_present
+    end
+  end
+  
+  context 'with VTT format' do
+    it_behaves_like 'a transcript parser', :vtt
+  end
+  
+  context 'with SRT format' do
+    it_behaves_like 'a transcript parser', :srt
+  end
+end
+```
+
+2. **Step 2: Implement Against Specs**
+```ruby
+class TranscriptParser
+  def parse(content)
+    format = detect_format(content)
+    segments = parse_segments(content, format)
+    
+    Transcript.new(
+      segments: segments,
+      speakers: extract_speakers(segments)
+    )
+  end
+  
+  private
+  
+  def detect_format(content)
+    # Implementation guided by format-specific specs
+  end
+  
+  def parse_segments(content, format)
+    # Implementation driven by segment structure specs
+  end
+  
+  def extract_speakers(segments)
+    # Implementation guided by speaker identification specs
+  end
+end
+```
+
+### Key Learnings
+
+1. **Problem**: Starting with implementation led to:
+   - Unclear requirements
+   - Missing edge cases
+   - No validation of output structure
+   - Difficulty testing different formats
+
+2. **Solution**: Returning to TDD principles:
+   - Wrote comprehensive specs first
+   - Defined clear expectations
+   - Covered multiple formats
+   - Validated output structure
+   - Used shared examples for common behavior
+
+3. **Benefits Realized**:
+   - Clear interface definition
+   - Confidence in format handling
+   - Easy to add new formats
+   - Maintainable test suite
+   - Documented behavior
+
+This real-world example demonstrates how returning to TDD principles helped recover from an implementation-first approach and led to a more robust, well-tested solution.

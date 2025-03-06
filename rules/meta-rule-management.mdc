@@ -1,0 +1,66 @@
+---
+description: Meta-rule to assist with prompting for and managing future cursor rules
+globs: ["**/*"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Meta Rule: Future Rule Management
+# This rule helps identify opportunities for new rules and manages their creation
+
+<rule>
+name: meta_rule_management
+description: Meta-rule to assist with prompting for and managing future cursor rules
+filters:
+  - type: file_extension
+    pattern: "\\.mdc$"
+actions:
+  - type: suggest
+    message: |
+      Rule Management Guidelines:
+
+      1. Rule Structure:
+         - Each rule must have a clear name and description
+         - Include filters for when the rule applies
+         - Provide specific actions or suggestions
+         - Include examples where appropriate
+
+      2. Rule Categories:
+         a) Core Rules:
+            - memory-management: Memory and task tracking system
+            - documentation-reference: Documentation standards
+            - problem-solving: Problem analysis approach
+            - rails: Rails-specific guidelines
+            - plan-updates: Surgical plan update guidelines
+
+         b) Support Rules:
+            - auto-format: Code formatting standards
+            - rule-acknowledgment: Rule following tracking
+            - rule-extraction: Rule management
+            - cursor_rules_location: File organization
+
+      3. Rule Updates:
+         - Document changes in rule version
+         - Update related rules if needed
+         - Maintain backwards compatibility
+         - Keep examples current
+
+      4. Rule Application:
+         - Check relevant rules before tasks
+         - Follow rule hierarchy
+         - Document rule conflicts
+         - Update as needed
+
+      Remember:
+      - Keep rules focused and clear
+      - Update examples regularly
+      - Maintain rule relationships
+      - Document changes properly
+
+metadata:
+  priority: high
+  version: 1.1
+  tags:
+    - meta
+    - rules
+    - management
+</rule>

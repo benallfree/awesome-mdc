@@ -1,0 +1,119 @@
+---
+description: Rule for extracting and managing rules from .cursorrules
+globs: ["**/.cursorrules"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Rule Extraction and Management
+# This rule helps identify and manage rules from .cursorrules
+
+<rule>
+name: rule_extraction
+description: Extracts and manages rules from .cursorrules file
+filters:
+  - type: file_extension
+    pattern: "\\.cursorrules$"
+  - type: content
+    pattern: "## [0-9]+\\."
+actions:
+  - type: suggest
+    message: |
+      Rules extracted from .cursorrules:
+
+      1. Project Structure Rules:
+         - All components in app/components/ or app/components/ui/
+         - Follow Rails 8 conventions
+         - Use service objects for complex logic
+         - Keep controllers RESTful and focused
+
+      2. Documentation Rules:
+         - Keep working memory in /docs/working-memory/
+         - Use plan.md and updates.md for tasks
+         - Document all components
+         - Keep API documentation current
+
+      3. Code Standards:
+         - Follow Ruby class structure templates
+         - Use proper model organization
+         - Follow controller conventions
+         - Document types with JSDoc
+
+      4. Git Practices:
+         - Use conventional commits
+         - Include scope in commits
+         - Keep commits atomic
+         - Follow branch naming conventions
+
+      5. Task Management:
+         - Use task templates
+         - Keep current status at top
+         - Use emoji markers in progress
+         - Update timestamps with date command
+
+      6. Security Rules:
+         - Follow OWASP guidelines
+         - Regular security audits
+         - Proper authentication
+         - Secure session management
+
+      7. Performance Rules:
+         - Monitor N+1 queries
+         - Use eager loading
+         - Implement proper caching
+         - Profile slow operations
+
+      8. Testing Requirements:
+         - Comprehensive RSpec coverage
+         - Unit tests for models/services
+         - Integration tests
+         - System tests for flows
+
+      9. Logging Standards:
+         - Use proper log levels
+         - Centralized logging
+         - Error tracking
+         - Performance monitoring
+
+      10. File Management:
+          - Follow directory structure
+          - Organize by feature
+          - Keep documentation updated
+          - Regular maintenance
+
+      11. Development Workflow:
+          - Use Docker
+          - Implement CI/CD
+          - Regular code reviews
+          - Performance monitoring
+
+      12. Error Handling:
+          - Proper exception handling
+          - Logging of errors
+          - Recovery procedures
+          - Backup strategies
+
+      13. Component Guidelines:
+          - Document all components
+          - Follow lifecycle rules
+          - Maintain documentation
+          - Regular reviews
+
+      14. Memory Management:
+          - Working memory in /docs
+          - Project memory maintenance
+          - Documentation updates
+          - Regular archival
+
+      Remember to:
+      - Check these rules before starting work
+      - Update rules as patterns emerge
+      - Document exceptions
+      - Regular rule reviews
+metadata:
+  priority: high
+  version: 1.0
+  tags:
+    - rules
+    - management
+    - documentation
+</rule>

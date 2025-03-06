@@ -1,0 +1,213 @@
+---
+description: Rules for debugging API issues in Rails applications
+globs: ["spec/**/*_spec.rb", "test/**/*_test.rb", "app/services/**/*.rb", "lib/**/*.rb"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# API Debugging Guidelines
+
+## 1. Initial Setup
+
+### 1.1 Required Gems
+```ruby
+group :test do
+  gem "rspec-rails"      # Testing framework
+  gem "vcr"              # Record and replay HTTP interactions
+  gem "webmock"          # HTTP request stubbing
+  gem "factory_bot_rails" # Test data generation
+end
+```
+
+### 1.2 VCR Configuration
+```ruby
+# spec/support/vcr.rb
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/vcr_cassettes"
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data('<API_KEY>') { ENV['API_KEY'] }
+end
+```
+
+## 2. Debugging Process
+
+### 2.1 Issue Isolation
+1. Create a minimal test case that reproduces the issue
+2. Isolate API calls from UI/business logic
+3. Use service objects for API interactions
+4. Log request/response cycles
+
+### 2.2 Test Structure
+```ruby
+RSpec.describe ApiService, :vcr do
+  describe "#fetch_data" do
+    context "when API is available" do
+      it "returns expected data" do
+        service = ApiService.new
+        response = service.fetch_data
+        expect(response).to include(expected_data)
+      end
+    end
+
+    context "when API is unavailable" do
+      before do
+        stub_request(:get, /api\.example\.com/).
+          to_return(status: 503)
+      end
+
+      it "handles the error gracefully" do
+        service = ApiService.new
+        expect { service.fetch_data }.
+          to raise_error(ApiService::ServiceUnavailable)
+      end
+    end
+  end
+end
+```
+
+## 3. VCR Best Practices
+
+### 3.1 Cassette Management
+1. Name cassettes descriptively: `"#{service_name}/#{action}_#{scenario}"`
+2. Use separate cassettes for different test scenarios
+3. Re-record cassettes periodically to catch API changes
+4. Filter sensitive data (API keys, tokens)
+
+### 3.2 Recording Options
+```ruby
+# Record new interactions, but play back existing ones
+it "fetches data", vcr: { record: :new_episodes } do
+  # test code
+end
+
+# Always use new recordings
+it "fetches data", vcr: { record: :all } do
+  # test code
+end
+
+# Never make real HTTP requests
+it "fetches data", vcr: { record: :none } do
+  # test code
+end
+```
+
+## 4. Service Object Pattern
+
+### 4.1 Structure
+```ruby
+# app/services/api_service.rb
+class ApiService
+  class Error < StandardError; end
+  class ServiceUnavailable < Error; end
+
+  def initialize(client = nil)
+    @client = client || default_client
+  end
+
+  def fetch_data
+    response = client.get("/endpoint")
+    handle_response(response)
+  rescue HTTP::Error => e
+    handle_error(e)
+  end
+
+  private
+
+  attr_reader :client
+
+  def handle_response(response)
+    case response.status
+    when 200 then parse_response(response)
+    when 503 then raise ServiceUnavailable
+    else raise Error, "Unexpected status: #{response.status}"
+    end
+  end
+end
+```
+
+## 5. Debugging Tools
+
+### 5.1 Request Inspection
+```ruby
+# config/initializers/api_debugging.rb
+if Rails.env.development?
+  ApiService.class_eval do
+    def fetch_data
+      response = super
+      Rails.logger.debug "API Response: #{response.inspect}"
+      response
+    end
+  end
+end
+```
+
+### 5.2 Network Analysis
+1. Use `rails server --debug` for detailed request logs
+2. Monitor `log/test.log` during specs
+3. Use browser dev tools for frontend API calls
+4. Consider using API debugging proxy (e.g., Charles Proxy)
+
+## 6. Common Issues and Solutions
+
+### 6.1 Authentication
+1. Verify credentials are correct
+2. Check token expiration
+3. Ensure proper header format
+4. Monitor rate limits
+
+### 6.2 Data Format
+1. Validate request payload structure
+2. Check response parsing
+3. Handle different content types
+4. Verify character encoding
+
+### 6.3 Network
+1. Check DNS resolution
+2. Verify SSL/TLS configuration
+3. Monitor timeout settings
+4. Handle redirects properly
+
+## 7. Documentation
+
+### 7.1 Required Documentation
+1. API endpoint specifications
+2. Authentication methods
+3. Expected request/response formats
+4. Error codes and handling
+5. Rate limit information
+
+### 7.2 Debugging Notes
+1. Document reproduction steps
+2. Save relevant VCR cassettes
+3. Note environment differences
+4. Track related issues/PRs
+
+## 8. Continuous Integration
+
+### 8.1 CI Configuration
+1. Set up API mocking in CI environment
+2. Use VCR's `:none` mode in CI
+3. Configure timeout thresholds
+4. Monitor test stability
+
+### 8.2 Environment Variables
+```yaml
+# .env.test
+API_KEY=test_key
+API_ENDPOINT=https://api.example.com
+VCR_RECORD_MODE=none
+```
+
+## 9. Recovery Procedures
+
+### 9.1 Rollback Strategy
+1. Maintain API version compatibility
+2. Keep backup of working VCR cassettes
+3. Document API changes
+4. Have fallback endpoints
+
+### 9.2 Emergency Procedures
+1. Circuit breaker implementation
+2. Fallback to cached data
+3. Graceful degradation
+4. User communication plan 

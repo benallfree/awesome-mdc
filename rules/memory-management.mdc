@@ -1,0 +1,151 @@
+---
+description: Memory management system rules and standards
+globs: ["**/docs/working-memory/**/*", "**/docs/templates/**/*", "**/docs/standards/**/*"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Memory Management System
+# Comprehensive rules for managing working memory, project memory, and documentation memory
+
+<rule>
+name: memory_management_system
+description: Rules and standards for the memory management system
+filters:
+  - type: file_extension
+    pattern: "\\.(md|mdc)$"
+  - type: directory
+    pattern: "(working-memory|templates|standards)"
+actions:
+  - type: suggest
+    message: |
+      Memory Management System Rules:
+
+      1. Memory Types:
+         a) Working Memory:
+            - Location: /docs/working-memory/
+            - Purpose: Active context and ongoing tasks
+            - Updates: Real-time during task execution
+            - Structure:
+              ```
+              /docs/working-memory/
+              ├── open/                 # Active tasks
+              │   └── {task-id}/
+              │       ├── plan.md       # Task planning
+              │       └── updates.md    # Progress tracking
+              └── done/                 # Completed tasks
+              ```
+
+         b) Project Memory:
+            - Location: /docs/
+            - Purpose: Long-term project knowledge
+            - Updates: Major decisions and milestones
+            - Components: Architecture, decisions, standards
+
+         c) Documentation Memory:
+            - Location: /docs/templates/
+            - Purpose: Standards and patterns
+            - Review: Monthly template updates
+            - Maintenance: Keep examples current
+
+      2. Task Documentation Files:
+         a) plan.md Requirements:
+            - Problem Analysis
+            - Solution Design
+            - Implementation Steps
+            - Affected Components
+            - Testing Plan
+            - Documentation Impact
+            - Dependencies
+
+         b) updates.md Structure:
+            - Current Status (top, single entry)
+            - Progress History (chronological)
+            - Decisions Log
+            - Issues Encountered
+            - Next Steps
+
+      3. Status Update Process:
+         a) Current Status:
+            - Single active status
+            - Use `date "+%Y-%m-%d %H:%M"` for timestamps
+            - Previous status moves to history
+
+         b) Progress Markers:
+            - ✓ Completed work
+            - 🤔 Decisions made
+            - ❌ Issues encountered
+            - ⏭️ Next steps
+            - 📚 Documentation updates
+
+      4. File Management:
+         a) Active Tasks:
+            - Keep in /docs/working-memory/open/
+            - Regular updates to plan.md and updates.md
+            - Move to /done/ when complete
+
+         b) Templates:
+            - Use task-plan-template.md
+            - Use task-updates-template.md
+            - Follow standard formats
+
+         c) Maintenance:
+            - Weekly active task review
+            - Monthly completed task archival
+            - Clean directory structure
+
+      5. Cross-Referencing:
+         a) Internal Links:
+            - Between plan.md and updates.md
+            - Task ID in all updates
+            - Component and task relationships
+
+         b) External Links:
+            - Related documentation
+            - Affected components
+            - External dependencies
+
+      6. Version Control:
+         a) Commit Patterns:
+            - Prefix: docs(memory)
+            - Include task ID
+            - Reference memory types
+
+         b) Branch Management:
+            - Format: docs/memory/{task-id}
+            - Short-lived, task-specific
+            - Merge after completion
+
+         c) Version Tagging:
+            - Format: memory/{YYYY-MM}
+            - Monthly snapshots
+            - Archive old memory
+
+      Remember:
+      - Update status before starting work
+      - Document decisions immediately
+      - Keep progress log current
+      - Use proper timestamps
+      - Regular maintenance and cleanup
+examples:
+  - input: |
+      # New task creation
+      mkdir -p docs/working-memory/open/auth-update-20240320
+      cp docs/templates/task-plan-template.md docs/working-memory/open/auth-update-20240320/plan.md
+      cp docs/templates/task-updates-template.md docs/working-memory/open/auth-update-20240320/updates.md
+
+  - input: |
+      # Status update
+      date "+%Y-%m-%d %H:%M"
+      # Update status in updates.md
+
+  - input: |
+      # Task completion
+      mv docs/working-memory/open/auth-update-20240320 docs/working-memory/done/
+metadata:
+  priority: critical
+  version: 1.0
+  tags:
+    - memory
+    - documentation
+    - task-management
+</rule>

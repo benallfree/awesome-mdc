@@ -1,0 +1,258 @@
+---
+description: Standardized approach for problem analysis, solution design, and implementation planning
+globs: ["**/docs/working-memory/**/*.md"]
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Problem-Solving Approach
+# Structured methodology for addressing issues and implementing features
+
+<rule>
+name: problem_solving_approach
+description: Framework for analyzing problems and designing solutions
+filters:
+  - type: file_extension
+    pattern: "\\.md$"
+  - type: content
+    pattern: "(Problem Analysis|Solution Design|Implementation Plan)"
+actions:
+  - type: suggest
+    message: |
+      Problem-Solving Framework:
+
+      1. Problem Analysis Phase:
+         a) Issue Identification:
+            - Clear problem statement
+            - Scope definition
+            - Impact assessment
+            - User/system perspective
+
+         b) Root Cause Analysis:
+            - List potential causes
+            - Evidence gathering
+            - Pattern identification
+            - Historical context
+
+         c) System Impact:
+            - Affected components
+            - Downstream effects
+            - Performance implications
+            - Security considerations
+
+         d) Documentation Review:
+            - Related issues
+            - Previous solutions
+            - Existing constraints
+            - Technical debt impact
+
+         e) Specialized Analysis:
+            - For API issues: Follow api_debugging_methodology rule
+            - For UI issues: Follow ui_debugging rule
+            - For performance issues: Follow performance_debugging rule
+            - For security issues: Follow security_debugging rule
+
+      2. Solution Design Phase:
+         a) Solution Brainstorming:
+            - Multiple approaches
+            - Innovation opportunities
+            - Industry best practices
+            - Team expertise leverage
+
+         b) Evaluation Criteria:
+            - Performance impact
+            - Maintainability
+            - Scalability
+            - Security implications
+            - Resource requirements
+
+         c) Trade-off Analysis:
+            - Pros and cons matrix
+            - Risk assessment
+            - Cost-benefit analysis
+            - Timeline implications
+
+         d) Solution Validation:
+            - Technical feasibility
+            - Resource availability
+            - Timeline viability
+            - Stakeholder alignment
+
+         e) Specialized Solutions:
+            - For API issues: Use api_debugging_methodology tools and patterns
+            - For UI issues: Use UI debugging patterns
+            - For performance issues: Use performance optimization patterns
+            - For security issues: Use security hardening patterns
+
+      3. Implementation Planning Phase:
+         a) Task Breakdown:
+            - Step-by-step plan
+            - Dependencies mapping
+            - Critical path identification
+            - Milestone definition
+
+         b) Risk Management:
+            - Potential blockers
+            - Mitigation strategies
+            - Fallback plans
+            - Recovery procedures
+
+         c) Testing Strategy:
+            - Test coverage requirements
+            - Test case definition
+            - Performance benchmarks
+            - Security validation
+
+         d) Documentation Planning:
+            - Code documentation
+            - API documentation
+            - Architecture updates
+            - Knowledge transfer
+
+         e) Specialized Testing:
+            - For API issues: Follow api_debugging_methodology test patterns
+              ```ruby
+              # Example API test structure from api_debugging_methodology
+              RSpec.describe ApiClient do
+                describe 'configuration' do
+                  it 'loads environment variables' do
+                    # Test env vars
+                  end
+
+                  it 'configures the client properly' do
+                    # Test client setup
+                  end
+                end
+              end
+              ```
+
+      4. Documentation Template:
+         ```markdown
+         ## Problem Analysis
+
+         ### Issue Description
+         - What: [Clear problem statement]
+         - Why: [Business/technical impact]
+         - Who: [Affected users/systems]
+         - When: [Occurrence pattern]
+         - Type: [Issue type - API/UI/Performance/Security]
+
+         ### Root Cause
+         - Identified causes:
+           1. [Primary cause]
+           2. [Secondary factors]
+         - Evidence:
+           - [Supporting data]
+           - [Observations]
+
+         ### System Impact
+         - Components:
+           - [List affected systems]
+         - Dependencies:
+           - [Upstream/downstream effects]
+
+         ### Specialized Analysis
+         - If API issue:
+           - Follow api_debugging_methodology steps
+           - Include debug script results
+           - Document VCR test results
+
+         ## Solution Design
+
+         ### Proposed Solutions
+         1. Solution A:
+            - Approach: [Description]
+            - Pros: [Benefits]
+            - Cons: [Drawbacks]
+            - Risks: [Potential issues]
+
+         2. Solution B:
+            - Approach: [Description]
+            - Pros: [Benefits]
+            - Cons: [Drawbacks]
+            - Risks: [Potential issues]
+
+         ### Selected Solution
+         - Choice: [Solution name]
+         - Rationale: [Decision factors]
+         - Trade-offs: [Accepted compromises]
+         - Specialized Approach:
+           - For API: Follow api_debugging_methodology patterns
+           - For UI: Follow UI patterns
+           - For Performance: Follow optimization patterns
+           - For Security: Follow security patterns
+
+         ## Implementation Plan
+
+         ### Steps
+         1. [ ] Step 1
+            - Tasks:
+              - [ ] Task 1.1
+              - [ ] Task 1.2
+            - Dependencies:
+              - [List dependencies]
+            - Specialized Steps:
+              - Follow relevant methodology (API/UI/Performance/Security)
+
+         ### Risk Mitigation
+         - Risks:
+           1. [Risk description]
+              - Mitigation: [Strategy]
+              - Fallback: [Plan B]
+
+         ### Testing
+         - Test cases:
+           1. [Test scenario]
+           2. [Test scenario]
+         - Performance:
+           - [Benchmarks]
+         - Specialized Testing:
+           - Follow relevant testing methodology
+         ```
+
+      Remember:
+      - Document all decisions
+      - Consider long-term impact
+      - Validate assumptions
+      - Plan for failure scenarios
+      - Keep documentation current
+      - Use specialized methodologies when applicable
+      - Reference specific debugging rules for different types of issues
+
+examples:
+  - input: |
+      // Problem: API authentication failing
+      // Using api_debugging_methodology:
+      // 1. Created debug script
+      // 2. Verified environment variables
+      // 3. Added VCR tests
+      // 4. Fixed credential encoding
+    output: |
+      Systematic debugging approach applied using specialized methodology
+
+  - input: |
+      Problem Analysis:
+      - API N+1 query in user dashboard
+      - Using api_debugging_methodology for analysis
+      - Affecting performance at scale
+      - Identified in monitoring
+
+      Solution Design:
+      - Implement eager loading
+      - Add query optimization
+      - Update indexes
+
+      Implementation Plan:
+      - Add includes statements
+      - Update controller logic
+      - Add performance tests
+    output: |
+      Complete problem-solving approach applied with specialized methodology
+
+metadata:
+  priority: high
+  version: 1.0
+  tags:
+    - methodology
+    - planning
+    - documentation
+</rule>

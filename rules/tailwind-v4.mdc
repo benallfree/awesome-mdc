@@ -1,0 +1,73 @@
+---
+description: Standards for Tailwind CSS v4 usage in Rails 8
+globs: 
+---
+** Original credit to https://github.com/Mawla/cursor_rules **
+
+# Tailwind CSS v4 Standards
+
+<rule>
+name: tailwind_v4
+description: Standards for Tailwind CSS v4 usage in Rails 8
+filters:
+  - type: file_extension
+    pattern: "\\.(css|erb)$"
+  - type: directory
+    pattern: "(app/assets/tailwind|app/assets/builds)"
+actions:
+  - type: suggest
+    message: |
+      1. Directory Structure:
+         ```
+         app/
+         ├── assets/
+         │   ├── tailwind/
+         │   │   └── application.css    # Main Tailwind input file
+         │   └── builds/
+         │       └── tailwind.css       # Generated output file
+         ```
+
+      2. Development Process:
+         - Use bin/dev for development
+         - Run rails tailwindcss:build before deployment
+         - Check if styles are applied before committing
+         - Never modify the generated tailwind.css file directly
+
+      3. Configuration Requirements:
+         - All Tailwind customizations go in app/assets/tailwind/application.css
+         - Use @layer components { } for component styles
+         - Use @layer utilities { } for custom utilities
+         - Use @apply for extracting common utility patterns
+         - Add plugins via @import statements at the top of application.css
+         - Example structure:
+           ```css
+           @tailwind base;
+           @tailwind components;
+           @tailwind utilities;
+
+           /* Custom plugins and imports */
+           @import "@tailwindcss/forms";
+           @import "@tailwindcss/typography";
+           @import "@tailwindcss/container-queries";
+
+           /* Custom component styles */
+           @layer components {
+             .btn-primary {
+               @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600;
+             }
+           }
+
+           /* Custom utilities */
+           @layer utilities {
+             .scrollbar-hide {
+               scrollbar-width: none;
+             }
+           }
+           ```
+
+      4. Layout Requirements:
+         ```erb
+         <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+         <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+         ```
+</rule>
