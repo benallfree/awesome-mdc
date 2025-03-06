@@ -1,0 +1,69 @@
+---
+description: Rules for the awesome project README.md
+globs: README.md
+---
+These rules describe how to create a README.md for the [Awesome](mdc:https:/awesome.re) proejct. 
+
+# Formatting
+
+
+- [ ] Run [`awesome-lint`](mdc:https:/github.com/sindresorhus/awesome-lint) on your list and fix the reported issues. If there are false-positives or things that cannot/shouldn't be fixed, please [report it](mdc:https:/github.com/sindresorhus/awesome-lint/issues/new).
+- [ ] The default branch should be named [`main`, not `master`](mdc:https:/www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references).
+- [ ] **Includes a succinct description of the project/theme at the top of the readme.** [(Example)](mdc:https:/github.com/willempienaar/awesome-quantified-self)
+	- ✅ `Mobile operating system for Apple phones and tablets.`
+	- ✅ `Prototyping interactive UI designs.`
+	- ❌ `Resources and tools for iOS development.`
+	- ❌ `Awesome Framer packages and tools.`
+- [ ] It's the result of hard work and the best I could possibly produce.
+	**If you have not put in considerable effort into your list, your pull request will be immediately closed.**
+- [ ] The repo name of your list should be in lowercase slug format: `awesome-name-of-list`.
+	- ✅ `awesome-swift`
+	- ✅ `awesome-web-typography`
+	- ❌ `awesome-Swift`
+	- ❌ `AwesomeWebTypography`
+- [ ] The heading title of your list should be in [title case](mdc:https:/capitalizemytitle.com) format: `# Awesome Name of List`.
+	- ✅ `# Awesome Swift`
+	- ✅ `# Awesome Web Typography`
+	- ❌ `# awesome-swift`
+	- ❌ `# AwesomeSwift`
+- [ ] Non-generated Markdown file in a GitHub repo.
+- [ ] The repo should have `awesome-list` & `awesome` as [GitHub topics](mdc:https:/help.github.com/articles/about-topics). I encourage you to add more relevant topics.
+- [ ] Not a duplicate. Please search for existing submissions.
+- [ ] Only has awesome items. Awesome lists are curations of the best, not everything.
+- [ ] Does not contain items that are unmaintained, has archived repo, deprecated, or missing docs. If you really need to include such items, they should be in a separate Markdown file.
+- [ ] Includes a project logo/illustration whenever possible.
+	- Either centered, fullwidth, or placed at the top-right of the readme. [(Example)](mdc:https:/github.com/sindresorhus/awesome-electron)
+	- The image should link to the project website or any relevant website.
+	- **The image should be high-DPI.** Set it to a maximum of half the width of the original image.
+	- Don't include both a title saying `Awesome X` and a logo with `Awesome X`. You can put the header image in a `#` (Markdown header) or `<h1>`.
+- [ ] Entries have a description, unless the title is descriptive enough by itself. It rarely is though.
+- [ ] Includes the [Awesome badge](mdc:https:/github.com/sindresorhus/awesome/blob/main/awesome.md#awesome-badge).
+	- Should be placed on the right side of the readme heading.
+		- Can be placed centered if the list has a centered graphics header.
+	- Should link back to this list.
+- [ ] Has a Table of Contents section.
+	- Should be named `Contents`, not `Table of Contents`.
+	- Should be the first section in the list.
+	- Should only have one level of [nested lists](mdc:https:/commonmark.org/help/tutorial/10-nestedLists.html), preferably none.
+	- Must not feature `Contributing` or `Footnotes` sections.
+- [ ] Has an appropriate license.
+	- **We strongly recommend the [CC0 license](mdc:https:/creativecommons.org/publicdomain/zero/1.0), but any [Creative Commons license](mdc:https:/creativecommons.org/choose) will work.**
+		- Tip: You can quickly add it to your repo by going to this URL: `https://github.com/<user>/<repo>/community/license/new?branch=main&template=cc0-1.0` (replace `<user>` and `<repo>` accordingly).
+	- A code license like MIT, BSD, Apache, GPL, etc, is not acceptable. Neither are WTFPL and [Unlicense](mdc:https:/unlicense.org).
+	- Place a file named `license` or `LICENSE` in the repo root with the license text.
+	- **Do not** add the license name, text, or a `Licence` section to the readme. GitHub already shows the license name and link to the full text at the top of the repo.
+	- To verify that you've read all the guidelines, please comment on your pull request with just the word `unicorn`.
+- [ ] Has [contribution guidelines](mdc:https:/github.com/sindresorhus/awesome/blob/main/awesome.md#include-contribution-guidelines).
+	- The file should be named `contributing.md`. The casing is up to you.
+	- It can optionally be linked from the readme in a dedicated section titled `Contributing`, positioned at the top or bottom of the main content.
+	- The section should not appear in the Table of Contents.
+- [ ] All non-important but necessary content (like extra copyright notices, hyperlinks to sources, pointers to expansive content, etc) should be grouped in a `Footnotes` section at the bottom of the readme. The section should not be present in the Table of Contents.
+- [ ] Has consistent formatting and proper spelling/grammar.
+	- The link and description are separated by a dash. <br>Example: `- [AVA](mdc:…) - JavaScript test runner.`
+	- The description starts with an uppercase character and ends with a period.
+	- Consistent and correct naming. For example, `Node.js`, not `NodeJS` or `node.js`.
+- [ ] Does not use [hard-wrapping](mdc:https:/stackoverflow.com/questions/319925/difference-between-hard-wrap-and-soft-wrap).
+- [ ] Does not include a CI (e.g. GitHub Actions) badge.<br>You can still use a CI for linting, but the badge has no value in the readme.
+- [ ] Does not include an `Inspired by awesome-foo` or `Inspired by the Awesome project` kinda link at the top of the readme. The Awesome badge is enough.
+
+**Go to the top and read it again.**
