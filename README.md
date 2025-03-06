@@ -8,6 +8,7 @@
 
 ## Contents
 
+- [MCP](#mcp)
 - [Development Standards](#development-standards)
 - [Debugging & Troubleshooting](#debugging--troubleshooting)
 - [Documentation & Knowledge Management](#documentation--knowledge-management)
@@ -24,6 +25,10 @@
 - [Testing & Quality Assurance](#testing--quality-assurance)
 - [Other Tools](#other-tools)
 - [Credits](#credits)
+
+## MCP
+
+- [Logo Gen (FAL)](https://github.com/sshtunnelvision/MCP-LOGO-GEN) - Logo generation capabilities using FAL AI, with tools for image generation, background removal, and automatic scaling.
 
 ## Development Standards
 
