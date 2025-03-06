@@ -5,19 +5,37 @@ on:
   pull_request:
 
 jobs:
-  lint:
+  lychee:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.9.3
         with:
-          bun-version: latest
+          # Exclude twitter.com (https://github.com/lycheeverse/lychee/issues/989)
+          args: README.md --verbose --no-progress
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install dependencies
-        run: bun install
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-      - name: Run lint
-        run: bun lint
+      - uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: |
+            README.md
+            contributing.md
+
+  awesome-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - run: npx awesome-lint
