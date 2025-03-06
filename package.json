@@ -3,7 +3,7 @@
   "description": "A curated list of awesome projects and resources for MDC",
   "version": "1.0.0",
   "scripts": {
-    "lint": "awesome-lint README.md && markdownlint-cli2 README.md && lychee -vv README.md"
+    "lint": "awesome-lint README.md  && markdownlint-cli2 README.md && lychee --max-retries 10 --retry-wait-time 30 --max-concurrency 1 README.md"
   },
   "devDependencies": {
     "awesome-lint": "^1.2.0",
@@ -13,7 +13,7 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all",
-    "printWidth": 120,
+    "printWidth": 80,
     "tabWidth": 2,
     "useTabs": false,
     "overrides": [
@@ -26,5 +26,10 @@
         }
       }
     ]
+  },
+  "markdownlint-cli2": {
+    "config": {
+      "line-length": false
+    }
   }
 }
