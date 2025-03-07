@@ -5,4 +5,4 @@ globs: README.md
 
 * Check for spelling errors
 * Run `bun lint` after every modification to `README.md` and continue editing until lint is satisfied.
-
+* If there are `cspell` errors but you know they are spelled correctly, add them to [cspell.json](mdc:cspell.json)
