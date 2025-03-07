@@ -8,7 +8,7 @@
 
 ## Contents
 
-- [MCP](#mcp)-
+- [Model Context Protocol (MCP)](#model-context-protocol-mcp)
 - [Development Standards](#development-standards)
 - [Debugging & Troubleshooting](#debugging--troubleshooting)
 - [Documentation & Knowledge Management](#documentation--knowledge-management)
@@ -24,6 +24,10 @@
 - [Development Tools & Libraries](#development-tools--libraries)
 - [Testing & Quality Assurance](#testing--quality-assurance)
 - [Other Tools](#other-tools)
+- [Web Frameworks & Libraries (New Entries)](#web-frameworks--libraries-new-entries)
+- [Programming Languages & Technologies (New Entries)](#programming-languages--technologies-new-entries)
+- [Mobile & Desktop Development (New Entries)](#mobile--desktop-development-new-entries)
+- [Cloud & DevOps Infrastructure](#cloud--devops-infrastructure)
 - [Credits](#credits)
 
 ## Model Context Protocol ([MCP](https://modelcontextprotocol.io/))
@@ -67,11 +71,14 @@
 - [Actix Web](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/actix-web.mdc) - Rust web framework.
 - [AIOHTTP](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/aiohttp.mdc) - Asynchronous HTTP client/server framework for Python.
 - [Angular](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/angular.mdc) - TypeScript-based web application framework.
+- [Angular TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/angular-typescript-cursorrules-prompt-file/.cursorrules) - Detailed guidance for Angular development with TypeScript, covering architecture patterns, component design, and dependency injection.
+- [Angular with Novo Elements](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/angular-novo-elements-cursorrules-prompt-file/.cursorrules) - Best practices for integrating Novo Elements UI library with Angular applications for enterprise-grade interfaces.
 - [Ant Design](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/ant-design.mdc) - React UI library.
 - [Apollo Client](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/apollo-client.mdc) - State management library for JavaScript.
 - [Apollo GraphQL](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/apollo-graphql.mdc) - GraphQL implementation for JavaScript.
 - [ASP.NET](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/asp-net.mdc) - Web framework for .NET.
 - [Astro](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/astro.mdc) - Web framework for content-driven websites.
+- [Astro TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/astro-typescript-cursorrules-prompt-file/.cursorrules) - Best practices for building static and server-rendered sites with Astro and TypeScript, focusing on performance and content-first architecture.
 - [Axios](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/axios.mdc) - Promise-based HTTP client for the browser and Node.js.
 - [Bottle](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bottle.mdc) - Fast, simple and lightweight WSGI micro web-framework for Python.
 - [Chakra UI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/chakra-ui.mdc) - Component library for React applications.
@@ -92,12 +99,14 @@
 - [Laravel](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/laravel.mdc) - PHP web application framework.
 - [Material UI](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/material-ui.mdc) - React UI framework.
 - [Next.js](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/next-js.mdc) - Comprehensive guidance for Next.js development covering application architecture, rendering strategies, performance optimization, and best practices for building robust, scalable React applications.
+- [Next.js 14 with Tailwind and SEO](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/cursorrules-cursor-ai-nextjs-14-tailwind-seo-setup/.cursorrules) - Complete framework for building SEO-optimized Next.js 14 applications with Tailwind CSS, including performance optimization and metadata strategies.
 - [NestJS](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nestjs.mdc) - Progressive Node.js framework.
 - [Nuxt](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/nuxt.mdc) - Vue framework for building web applications.
 - [Phoenix](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/phoenix.mdc) - Web framework for Elixir.
 - [Pyramid](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/pyramid.mdc) - Web framework for Python.
 - [Qwik](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/qwik.mdc) - New kind of web framework.
 - [React](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react.mdc) - Comprehensive guide to React best practices covering code organization, performance optimization, security considerations, testing strategies, and component patterns for building maintainable, scalable applications.
+- [React TypeScript with Shadcn UI](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/cursor-ai-react-typescript-shadcn-ui-cursorrules-p/.cursorrules) - Best practices for React applications using TypeScript and Shadcn UI components with emphasis on accessibility and performance.
 - [React MobX](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-mobx.mdc) - State management for React.
 - [React Native](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-native.mdc) - Comprehensive best practices for React Native development covering TypeScript integration, performance optimization, component architecture, and cross-platform considerations.
 - [React Query](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/react-query.mdc) - Data fetching library for React.
@@ -119,10 +128,12 @@
 - [tRPC](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/trpc.mdc) - End-to-end typesafe APIs for TypeScript.
 - [Vue](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/vue.mdc) - Progressive JavaScript framework.
 - [Vue3](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/vue3.mdc) - Latest version of Vue.js.
+- [WordPress Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/cursorrules-cursor-ai-wordpress-draft-macos-prompt/.cursorrules) - Guidelines for efficient WordPress theme and plugin development, including Gutenberg block creation and performance optimization techniques.
 
 ## Mobile & Desktop Development
 
 - [Android SDK](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/android-sdk.mdc) - Tools for building Android applications.
+- [Android Jetpack Compose](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/android-jetpack-compose-cursorrules-prompt-file/.cursorrules) - Modern, declarative UI toolkit for Android development with component composition patterns and reactive state management.
 - [Electron](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/electron.mdc) - Framework for creating native applications with web technologies.
 - [Expo](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/expo.mdc) - Platform for making universal React applications.
 - [Flutter](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/flutter.mdc) - UI toolkit for building natively compiled applications.
@@ -147,6 +158,7 @@
 - [Azure](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/azure.mdc) - Cloud computing service.
 - [Clerk](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/clerk.mdc) - Authentication and user management.
 - [Cloudflare](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/cloudflare.mdc) - Web infrastructure and website security company.
+- [Convex](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/convex-cursorrules-prompt-file/.cursorrules) - Backend platform combining database, cloud functions, and real-time subscriptions for full-stack JavaScript applications.
 - [DigitalOcean](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/digitalocean.mdc) - Cloud infrastructure provider.
 - [Firebase](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/firebase.mdc) - App development platform.
 - [GCP](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/gcp.mdc) - Google Cloud Platform.
@@ -233,12 +245,15 @@
 ## Development Tools & Libraries
 
 - [AnyIO](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/anyio.mdc) - Asynchronous I/O framework.
+- [ASCII Simulation Game](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/ascii-simulation-game-cursorrules-prompt-file/.cursorrules) - Framework for developing text-based simulation games using ASCII art, including game loop design and terminal rendering techniques.
 - [AsyncIO](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/asyncio.mdc) - Asynchronous I/O framework for Python.
 - [BeautifulSoup4](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/beautifulsoup4.mdc) - Library for parsing HTML and XML.
 - [Black](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/black.mdc) - Python code formatter.
 - [Boto3](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/boto3.mdc) - Best practices for using the AWS SDK in Python covering service integration patterns, error handling, resource management, and security principles for building cloud applications.
 - [Bun](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/bun.mdc) - JavaScript runtime and toolkit.
+- [Chrome Extension Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/chrome-extension-dev-js-typescript-cursorrules-pro/.cursorrules) - Comprehensive guide for building Chrome extensions with JavaScript and TypeScript, covering manifest V3, browser APIs, and security best practices.
 - [Click](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/click.mdc) - Command line interface creation kit for Python.
+- [Code Guidelines](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/code-guidelines-cursorrules-prompt-file/.cursorrules) - Universal coding standards covering clean code principles, documentation practices, and efficient development workflows across languages.
 - [CUDA](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/cuda.mdc) - Parallel computing platform.
 - [CustomTkinter](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/customtkinter.mdc) - Modern UI library for Tkinter.
 - [DataDog](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/datadog.mdc) - Monitoring service for cloud-scale applications.
@@ -327,6 +342,107 @@
 - [StatsModels](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/statsmodels.mdc) - Statistical models for Python.
 - [Tailwind](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/tailwind.mdc) - Utility-first CSS framework.
 - [Vim](https://github.com/sanjeed5/awesome-cursor-rules-mdc/blob/main/rules-mdc/vim.mdc) - Text editor.
+
+## Web Frameworks & Libraries (New Entries)
+
+- [Vue 3 Composition API](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/vue3-composition-api-cursorrules-prompt-file/.cursorrules) - Best practices for Vue 3 Composition API, covering setup functions, reactivity primitives, lifecycle hooks, and proper folder structure.
+- [Vue 3 with Nuxt 3 Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/vue-3-nuxt-3-development-cursorrules-prompt-file/.cursorrules) - Guidelines for Vue 3 and Nuxt 3 integration, focusing on server-side rendering and composition API usage in Nuxt context.
+- [Vue 3 with Nuxt 3 TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/vue-3-nuxt-3-typescript-cursorrules-prompt-file/.cursorrules) - TypeScript implementation standards for Vue 3 with Nuxt 3, covering type definitions and strong typing patterns.
+- [TypeScript with Vue.js](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-vuejs-cursorrules-prompt-file/.cursorrules) - TypeScript integration patterns for Vue.js applications with type-safe component development.
+- [SvelteKit Optimization](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/web-app-optimization-cursorrules-prompt-file/.cursorrules) - Performance optimization techniques for Svelte 5 and SvelteKit applications, covering SSR, static generation, and minimal JavaScript strategies.
+- [SvelteKit TypeScript Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/sveltekit-typescript-guide-cursorrules-prompt-file/.cursorrules) - TypeScript implementation patterns for SvelteKit, emphasizing type safety and proper component typing.
+- [SvelteKit with Tailwind CSS and TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/sveltekit-tailwindcss-typescript-cursorrules-promp/.cursorrules) - Integration patterns for SvelteKit with Tailwind CSS and TypeScript, covering component styling and type-safe UI development.
+- [SvelteKit RESTful API with Tailwind CSS](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/sveltekit-restful-api-tailwind-css-cursorrules-pro/.cursorrules) - Guidelines for building RESTful APIs with SvelteKit, including endpoint structure and Tailwind CSS integration.
+- [Svelte 5 vs Svelte 4](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/svelte-5-vs-svelte-4-cursorrules-prompt-file/.cursorrules) - Migration guide and feature comparison between Svelte 5 and Svelte 4, emphasizing new capabilities and syntax changes.
+- [Next.js with TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-typescript-cursorrules-prompt-file/.cursorrules) - Full-stack Next.js application architecture with TypeScript, covering frontend components, API routes, and shadcn/ui integration.
+- [Next.js TypeScript App Directory](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-typescript-app-cursorrules-prompt-file/.cursorrules) - Next.js App Router architecture patterns with TypeScript implementation.
+- [Next.js with React and TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-react-typescript-cursorrules-prompt-file/.cursorrules) - Component patterns and data fetching strategies for Next.js applications with React and TypeScript.
+- [Next.js with TypeScript and Tailwind](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-typescript-tailwind-cursorrules-prompt-file/.cursorrules) - Integration patterns for Next.js with TypeScript and Tailwind CSS styling.
+- [Next.js App Router Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-app-router-cursorrules-prompt-file/.cursorrules) - Implementation patterns for Next.js App Router, focusing on file-based routing and data fetching.
+- [Next.js with React and Tailwind CSS](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-react-tailwind-cursorrules-prompt-file/.cursorrules) - Component architecture and styling patterns for Next.js with React and Tailwind CSS.
+- [Next.js with Material UI and Tailwind CSS](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-material-ui-tailwind-css-cursorrules-prompt/.cursorrules) - Integration strategies for combining Material UI components with Tailwind CSS in Next.js applications.
+- [Next.js 15 with React 19, Vercel AI, and Tailwind](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs15-react19-vercelai-tailwind-cursorrules-prompt-file/.cursorrules) - Modern architecture patterns for Next.js 15 with React 19, Vercel AI integration, and Tailwind styling.
+- [Next.js with Vercel and TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-vercel-typescript-cursorrules-prompt-file/.cursorrules) - Deployment strategies and optimizations for Next.js applications on Vercel with TypeScript.
+- [Next.js with Vercel and Supabase](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-vercel-supabase-cursorrules-prompt-file/.cursorrules) - Full-stack application patterns for Next.js with Vercel deployment and Supabase backend integration.
+- [React with Chakra UI](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-chakra-ui-cursorrules-prompt-file/.cursorrules) - Component architecture and theming guidelines for React applications with Chakra UI, emphasizing functional components and hooks.
+- [React Component Creation](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-components-creation-cursorrules-prompt-file/.cursorrules) - Best practices for creating reusable and maintainable React components with proper state management.
+- [React with GraphQL and Apollo Client](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-graphql-apollo-client-cursorrules-prompt-file/.cursorrules) - Data fetching patterns for React applications using GraphQL with Apollo Client.
+- [React with MobX](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-mobx-cursorrules-prompt-file/.cursorrules) - State management patterns for React applications using MobX observables and actions.
+- [React Query Implementation](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-query-cursorrules-prompt-file/.cursorrules) - Data fetching and caching strategies for React applications using React Query.
+- [React with Redux and TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-redux-typescript-cursorrules-prompt-file/.cursorrules) - Type-safe state management with Redux in React applications using TypeScript.
+- [React with Styled Components](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-styled-components-cursorrules-prompt-file/.cursorrules) - Component styling patterns for React applications using Styled Components.
+- [React with Next.js and Node.js](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-typescript-nextjs-nodejs-cursorrules-prompt-/.cursorrules) - Full-stack application architecture with React, Next.js frontend and Node.js backend.
+- [React with Symfony](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-typescript-symfony-cursorrules-prompt-file/.cursorrules) - Integration patterns for React frontend with Symfony PHP backend.
+- [React Next.js UI Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-nextjs-ui-development-cursorrules-prompt-fil/.cursorrules) - UI component architecture and styling patterns for React with Next.js.
+- [Python Django Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-django-best-practices-cursorrules-prompt-fi/.cursorrules) - Architecture patterns and coding standards for Django applications, including MVT structure, class-based views, and ORM optimization.
+
+## Programming Languages & Technologies (New Entries)
+
+- [TypeScript Zod with Tailwind and Next.js](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-zod-tailwind-nextjs-cursorrules-prompt-/.cursorrules) - Type validation patterns using Zod in TypeScript projects with Tailwind CSS and Next.js integration.
+- [WebAssembly Z80 Cellular Automata](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/webassembly-z80-cellular-automata-cursorrules-prom/.cursorrules) - Implementation strategies for Z80 cellular automata simulation using WebAssembly, focusing on environmental region grid systems.
+- [Python FastAPI Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-fastapi-best-practices-cursorrules-prompt-f/.cursorrules) - Functional and declarative programming patterns for FastAPI development, including Pydantic models, asynchronous operations, and performance optimization.
+- [Python FastAPI Scalable API](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-fastapi-scalable-api-cursorrules-prompt-fil/.cursorrules) - Architecture patterns for building scalable FastAPI applications with TypeScript frontends, including folder structure and containerization.
+- [Python FastAPI](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-fastapi-cursorrules-prompt-file/.cursorrules) - Core FastAPI implementation patterns focusing on route organization and dependency injection.
+- [Python 3.12 FastAPI Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-312-fastapi-best-practices-cursorrules-prom/.cursorrules) - Modern FastAPI development leveraging Python 3.12 features, including typing improvements and performance optimizations.
+- [Python Flask JSON Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-flask-json-guide-cursorrules-prompt-file/.cursorrules) - JSON handling patterns for Flask applications with proper serialization and validation.
+- [Python GitHub Setup](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-github-setup-cursorrules-prompt-file/.cursorrules) - GitHub integration patterns for Python projects including GitHub Actions, issue templates, and project configuration.
+- [Python LLM ML Workflow](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-llm-ml-workflow-cursorrules-prompt-file/.cursorrules) - Architectural patterns for building LLM/ML workflows in Python, covering model training, evaluation, and deployment.
+- [Python Projects Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-projects-guide-cursorrules-prompt-file/.cursorrules) - Project structure and organization patterns for Python applications with modern best practices.
+- [Python with TypeScript Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python--typescript-guide-cursorrules-prompt-file/.cursorrules) - Integration patterns for Python backends with TypeScript frontends through API-based architecture.
+- [Python Containerization](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-containerization-cursorrules-prompt-file/.cursorrules) - Docker containerization strategies for Python applications with multi-stage builds and optimization.
+- [Python Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-cursorrules-prompt-file-best-practices/.cursorrules) - General Python coding standards covering function design, error handling, and code organization.
+- [Python Developer Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/python-developer-cursorrules-prompt-file/.cursorrules) - Comprehensive Python development standards covering project setup, testing, and deployment.
+- [PyQT6 EEG Processing](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pyqt6-eeg-processing-cursorrules-prompt-file/.cursorrules) - UI implementation patterns for EEG data processing applications using PyQT6.
+- [PyTorch with Scikit-learn](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pytorch-scikit-learn-cursorrules-prompt-file/.cursorrules) - Integration patterns for PyTorch deep learning with Scikit-learn preprocessing and evaluation.
+- [Pandas with Scikit-learn Guide](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/pandas-scikit-learn-guide-cursorrules-prompt-file/.cursorrules) - Data processing workflows combining Pandas for manipulation and Scikit-learn for machine learning.
+- [JavaScript TypeScript Code Quality](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/javascript-typescript-code-quality-cursorrules-pro/.cursorrules) - Code quality standards for JavaScript and TypeScript covering linting, formatting, and clean code principles.
+- [JavaScript Chrome APIs](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/javascript-chrome-apis-cursorrules-prompt-file/.cursorrules) - Implementation patterns for using Chrome browser APIs in JavaScript applications.
+- [JavaScript Astro with Tailwind CSS](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/javascript-astro-tailwind-css-cursorrules-prompt-f/.cursorrules) - Integration patterns for Astro with Tailwind CSS, focusing on static site generation and styling.
+- [TypeScript Code Conventions](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-code-convention-cursorrules-prompt-file/.cursorrules) - TypeScript coding standards covering naming conventions, type definitions, and module organization.
+- [TypeScript with Axios](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-axios-cursorrules-prompt-file/.cursorrules) - Type-safe API request patterns using Axios in TypeScript applications.
+- [TypeScript with CLASP](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-clasp-cursorrules-prompt-file/.cursorrules) - Development patterns for Google Apps Script using TypeScript with CLASP tooling.
+- [TypeScript LLM Tech Stack](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-llm-tech-stack-cursorrules-prompt-file/.cursorrules) - Architectural patterns for building LLM-powered applications with TypeScript frontends.
+- [HTML with Tailwind CSS and JavaScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/html-tailwind-css-javascript-cursorrules-prompt-fi/.cursorrules) - Implementation patterns for HTML pages using Tailwind CSS and vanilla JavaScript.
+- [TypeScript Node.js Next.js AI](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nodejs-nextjs-ai-cursorrules-prompt-fil/.cursorrules) - Implementation patterns for AI-powered applications using TypeScript, Node.js, and Next.js.
+- [TypeScript Node.js Next.js App](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nodejs-nextjs-app-cursorrules-prompt-fi/.cursorrules) - Full-stack application architecture with TypeScript, Node.js backend, and Next.js frontend.
+- [TypeScript Node.js Next.js React UI CSS](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nodejs-nextjs-react-ui-css-cursorrules-/.cursorrules) - UI component patterns for full-stack applications with TypeScript, Node.js, Next.js, and React.
+- [TypeScript Node.js React Vite](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nodejs-react-vite-cursorrules-prompt-fi/.cursorrules) - Application architecture with TypeScript, Node.js backend, and React frontend using Vite.
+- [TypeScript React](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-react-cursorrules-prompt-file/.cursorrules) - Component patterns for React applications using TypeScript with type-safe props and state.
+- [TypeScript React Next.js Cloudflare](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-react-nextjs-cloudflare-cursorrules-pro/.cursorrules) - Deployment patterns for TypeScript React applications with Next.js on Cloudflare infrastructure.
+- [TypeScript React NextUI Supabase](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-react-nextui-supabase-cursorrules-promp/.cursorrules) - Full-stack application architecture with TypeScript React using NextUI components and Supabase backend.
+- [TypeScript Shadcn UI Next.js](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-shadcn-ui-nextjs-cursorrules-prompt-fil/.cursorrules) - UI component patterns for Next.js applications using TypeScript with Shadcn UI components.
+- [TypeScript Vite Tailwind](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-vite-tailwind-cursorrules-prompt-file/.cursorrules) - Project setup and structure for TypeScript applications using Vite and Tailwind CSS.
+- [TypeScript NestJS Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nestjs-best-practices-cursorrules-promp/.cursorrules) - Architecture patterns for backend applications using TypeScript with NestJS framework.
+- [TypeScript Next.js](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nextjs-cursorrules-prompt-file/.cursorrules) - Implementation patterns for Next.js applications using TypeScript.
+- [TypeScript Next.js React](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nextjs-react-cursorrules-prompt-file/.cursorrules) - Component patterns for Next.js applications with React and TypeScript.
+- [TypeScript Next.js React Tailwind Supabase](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nextjs-react-tailwind-supabase-cursorru/.cursorrules) - Full-stack application architecture with TypeScript, Next.js, React, Tailwind CSS, and Supabase backend.
+- [TypeScript Next.js Supabase](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-nextjs-supabase-cursorrules-prompt-file/.cursorrules) - Integration patterns for Next.js applications with TypeScript and Supabase backend.
+- [Next.js Type LLM](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/next-type-llm/.cursorrules) - Type-safe LLM integration patterns for Next.js applications.
+- [Next.js Supabase Todo App](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-supabase-todo-app-cursorrules-prompt-file/.cursorrules) - Todo application architecture with Next.js frontend and Supabase backend.
+- [Next.js Supabase Shadcn PWA](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-supabase-shadcn-pwa-cursorrules-prompt-file/.cursorrules) - Progressive Web App implementation with Next.js, Supabase, and Shadcn UI components.
+- [Next.js SEO Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-seo-dev-cursorrules-prompt-file/.cursorrules) - SEO optimization strategies for Next.js applications with metadata enhancements.
+- [Next.js Tailwind TypeScript Apps](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/nextjs-tailwind-typescript-apps-cursorrules-prompt/.cursorrules) - Application architecture for Next.js with Tailwind CSS and TypeScript.
+- [Python FastAPI API](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/cursorrules-file-cursor-ai-python-fastapi-api/.cursorrules) - API development patterns using Python with FastAPI framework.
+
+## Mobile & Desktop Development (New Entries)
+
+- [React Native with Expo](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-native-expo-cursorrules-prompt-file/.cursorrules) - Development patterns for React Native applications using Expo, covering component structure and SDK utilization.
+- [React Native Expo Router with TypeScript (Windows)](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/react-native-expo-router-typescript-windows-cursorrules-prompt-file/.cursorrules) - Windows-specific setup for React Native with Expo Router and TypeScript.
+- [Flutter App Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/flutter-app-expert-cursorrules-prompt-file/.cursorrules) - Architecture patterns for Flutter applications using Material 3 design and BLoC pattern for state management.
+- [Flutter Development Guidelines](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/flutter-development-guidelines-cursorrules-prompt-file) - Comprehensive Flutter development standards covering widget composition and platform adaptation.
+- [Flutter with Riverpod](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/flutter-riverpod-cursorrules-prompt-file/.cursorrules) - State management patterns for Flutter applications using Riverpod.
+- [Unity C# Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/unity-cursor-ai-c-cursorrules-prompt-file/.cursorrules) - Game development patterns for Unity using C#, covering component architecture and performance optimization.
+- [SwiftUI Guidelines](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/swiftui-guidelines-cursorrules-prompt-file/.cursorrules) - Implementation patterns for iOS applications using SwiftUI, covering declarative UI design and state management.
+- [TypeScript with Expo, Jest, and Detox](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/typescript-expo-jest-detox-cursorrules-prompt-file/.cursorrules) - Testing strategies for React Native applications with TypeScript using Jest for unit testing and Detox for E2E testing.
+- [Tauri with Svelte and TypeScript](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/tauri-svelte-typescript-guide-cursorrules-prompt-f/.cursorrules) - Desktop application patterns using Tauri with Svelte and TypeScript for cross-platform development.
+- [DragonRuby Best Practices](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/dragonruby-best-practices-cursorrules-prompt-file/.cursorrules) - Game development patterns using DragonRuby Game Toolkit with performance optimization techniques.
+- [Graphical Apps Development](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/graphical-apps-development-cursorrules-prompt-file/.cursorrules) - Cross-platform graphical application development strategies, including rendering and user interaction patterns.
+
+## Cloud & DevOps Infrastructure
+
+- [Linux NVIDIA CUDA Python](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/linux-nvidia-cuda-python-cursorrules-prompt-file/.cursorrules) - Setup and optimization patterns for Python applications using CUDA on Linux with NVIDIA GPUs.
+- [Kubernetes MkDocs Documentation](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/kubernetes-mkdocs-documentation-cursorrules-prompt/.cursorrules) - Documentation patterns for Kubernetes applications using MkDocs.
+- [KNative Istio Typesense GPU](https://github.com/PatrickJS/awesome-cursorrules/blob/main/rules/knative-istio-typesense-gpu-cursorrules-prompt-fil/.cursorrules) - Infrastructure patterns for serverless applications using KNative, Istio, Typesense, and GPU acceleration.
 
 ## Credits
 

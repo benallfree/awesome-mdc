@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "concurrently 'bun run lint:*'",
     "lint:cspell": "cspell-cli README.md",
-    "lint:lychee": "lychee --max-retries=10 --retry-wait-time=60 --max-concurrency=10 -vv README.md",
+    "lint:lychee": "lychee --max-retries=10 --retry-wait-time=60 --max-concurrency=30 -vv README.md",
     "lint:markdown": "markdownlint-cli2 README.md",
     "lint:awesome": "awesome-lint README.md"
   },

@@ -41,6 +41,12 @@
     "Streamlit",
     "Matplotlib",
     "Mawla",
-    "sanjeed"
+    "sanjeed",
+    "metaprogramming",
+    "Symfony",
+    "Pydantic",
+    "frontends",
+    "Tauri",
+    "Typesense"
   ]
 }
